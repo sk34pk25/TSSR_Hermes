@@ -1,0 +1,139 @@
+site_name: TSSR 2026-2027
+site_description: Documentation de la formation Technicien Supérieur Systèmes & Réseaux
+site_url: https://tssr.local
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: fr
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Passage en mode sombre
+    - scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Passage en mode clair
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.indexes
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/school
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path: docs
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+      permalink_title: Lien permanent
+
+nav:
+  - Accueil: index.md
+  - Réseaux:
+    - réseaux/index.md
+    - Fondamentaux: réseaux/fondamentaux.md
+    - Adressage IP: réseaux/adressage.md
+    - Routage: réseaux/routage.md
+    - VLAN & Switching: réseaux/vlan-switching.md
+    - Services réseau: réseaux/services.md
+  - Windows Server:
+    - windows-server/index.md
+    - Installation: windows-server/installation.md
+    - Active Directory: windows-server/active-directory.md
+    - GPO: windows-server/gpo.md
+    - DNS & DHCP: windows-server/dns-dhcp.md
+    - Hyper-V: windows-server/hyper-v.md
+  - Linux:
+    - linux/index.md
+    - Installation: linux/installation.md
+    - Administration: linux/administration.md
+    - Services: linux/services.md
+    - Scripting Bash: linux/scripting.md
+    - Sécurité Linux: linux/sécurité.md
+  - Cybersécurité:
+    - cybersécurité/index.md
+    - Fondamentaux: cybersécurité/fondamentaux.md
+    - Hardening: cybersécurité/hardening.md
+    - Pare-feu: cybersécurité/pare-feu.md
+    - Tests d'intrusion: cybersécurité/tests-intrusion.md
+  - Labs & TP:
+    - labs-tp/index.md
+    - Lab Réseau: labs-tp/lab-reseau.md
+    - Lab Active Directory: labs-tp/lab-ad.md
+    - Lab Serveur Linux: labs-tp/lab-linux.md
+    - Lab Pare-feu: labs-tp/lab-firewall.md
+    - Lab Virtualisation: labs-tp/lab-virtualisation.md
+  - Commandes utiles:
+    - commandes-utiles/index.md
+    - Linux: commandes-utiles/linux.md
+    - Windows: commandes-utiles/windows.md
+    - Réseau: commandes-utiles/réseau.md
+  - Projets:
+    - projets/index.md
+    - Infrastructure complète: projets/infra-complète.md
+    - Audit sécurité: projets/audit-sécurité.md
+    - Automatisation: projets/automatisation.md
+  - Ressources: ressources/index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/
+  generator: false
+  consent:
+    title: Cookies
+    description: >-
+      Nous utilisons le suivi pour améliorer votre expérience.
+  copyright: Copyright &copy; 2026-2027 TSSR — Formation Technicien Supérieur Systèmes & Réseaux
+
+extra_css:
+  - _static/custom.css
