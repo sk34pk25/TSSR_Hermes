@@ -1,6 +1,8 @@
 site_name: TSSR 2026-2027
 site_description: Documentation de la formation Technicien Supérieur Systèmes & Réseaux
-site_url: https://tssr.local
+site_url: https://sk34pk25.github.io/TSSR_Hermes/
+repo_url: https://github.com/sk34pk25/TSSR_Hermes
+repo_name: sk34pk25/TSSR_Hermes
 docs_dir: docs
 site_dir: site
 
