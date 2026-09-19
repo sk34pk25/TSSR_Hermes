@@ -6,7 +6,7 @@
    Header / Barre de navigation principale
    ----------------------------------------------------------------------- */
 .md-header {
-  background-color: rgba(255, 255, 255, 0.88);
+  background-color: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--tssr-border, #cfd8dc);
@@ -14,13 +14,8 @@
 }
 
 [data-md-color-scheme="slate"] .md-header {
-  background-color: rgba(30, 30, 46, 0.88);
+  background-color: rgba(30, 30, 46, 0.92);
   border-bottom-color: var(--tssr-border, #37474f);
-}
-
-.md-header__inner {
-  padding: 0 var(--tssr-space-md, 16px);
-  height: 56px;
 }
 
 .md-header__title {
@@ -51,18 +46,15 @@
   opacity: 0.9;
 }
 
-/* Recherche — centrée et visible */
+/* Recherche — style desktop, responsive géré par Material */
 .md-search {
-  flex: 1;
   max-width: 480px;
-  margin: 0 auto;
 }
 
 .md-search__form {
   background-color: var(--tssr-surface-alt, #eef1f5);
   border: 1px solid var(--tssr-border-light, #eceff1);
   border-radius: var(--tssr-radius-md, 8px);
-  height: 36px;
 }
 
 .md-search__form:hover {
@@ -72,7 +64,6 @@
 .md-search__input {
   font-size: 0.875rem;
   color: var(--tssr-text, #1a1a2e);
-  height: 100%;
 }
 
 .md-search__input::placeholder {
@@ -145,10 +136,6 @@
 /* -----------------------------------------------------------------------
    Sidebar gauche — Navigation hiérarchique
    ----------------------------------------------------------------------- */
-.md-sidebar--primary {
-  padding-top: var(--tssr-space-md, 16px);
-}
-
 .md-nav {
   font-size: 0.875rem;
   line-height: 1.4;
@@ -306,10 +293,6 @@
 /* -----------------------------------------------------------------------
    Sommaire droit — Table of contents
    ----------------------------------------------------------------------- */
-.md-sidebar--secondary {
-  padding-top: var(--tssr-space-md, 16px);
-}
-
 .md-nav__title {
   font-size: 0.75rem;
   font-weight: 600;
