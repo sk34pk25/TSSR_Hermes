@@ -147,7 +147,6 @@
   padding: 6px 12px;
   border-radius: var(--tssr-radius-sm, 4px);
   margin: 1px 0;
-  display: block;
   transition: background-color var(--tssr-transition, 200ms) ease,
               color var(--tssr-transition, 200ms) ease;
   font-weight: 400;
@@ -421,8 +420,8 @@
 .md-nav,
 .md-footer,
 .md-search__form,
-.md-types__table,
-.md-types__pre {
+.md-typeset table,
+.md-typeset pre {
   transition: background-color var(--tssr-transition, 200ms) ease,
               color var(--tssr-transition, 200ms) ease,
               border-color var(--tssr-transition, 200ms) ease;
@@ -437,8 +436,8 @@
   .md-nav,
   .md-footer,
   .md-search__form,
-  .md-types__table,
-  .md-types__pre,
+  .md-typeset table,
+  .md-typeset pre,
   .md-nav__link {
     transition: none;
   }

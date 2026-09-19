@@ -31,34 +31,17 @@
    Mobile — sidebar dans drawer, recherche adaptative
    ----------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
-  /* Sidebar gauche — le drawer Material la gère nativement */
-  .md-sidebar--primary {
-    display: none;
-  }
-
   /* Contenu — padding réduit */
   .md-content {
     padding: 16px 12px;
   }
 
-  /* Navigation précédent/suivant — empilée */
+  /* Navigation précédent/suivant */
   .md-footer__link {
     padding: 12px;
   }
 
-  /* Tableaux — scrollable dans leur conteneur */
-  .md-typeset .table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Pré — scrollable */
-  .md-typeset pre {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  /* Zones tactules minimum */
+  /* Zones tactiles minimum */
   .md-nav__link,
   .md-header__button,
   .md-footer__link {

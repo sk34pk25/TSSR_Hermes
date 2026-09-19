@@ -36,7 +36,6 @@ theme:
     - navigation.path
     - navigation.tracking
     - navigation.sections
-    - navigation.expand
     - navigation.prune
     - search.suggest
     - search.highlight
@@ -49,7 +48,6 @@ theme:
   icon:
     repo: fontawesome/brands/github
     logo: material/school
-  custom_dir: docs/assets
 
 extra_css:
   - assets/stylesheets/tokens.css

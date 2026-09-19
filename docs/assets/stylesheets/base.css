@@ -12,9 +12,6 @@ body {
   line-height: 1.6;
   color: var(--tssr-text, #1a1a2e);
   background-color: var(--tssr-bg, #f5f7fa);
-  max-width: var(--tssr-max-width, 1100px);
-  margin: 0 auto;
-  padding: 0 var(--tssr-space-md, 16px);
 }
 
 /* --- Titres --- */
@@ -112,9 +109,9 @@ img {
 }
 
 /* --- Scroll horizontal sécurisé --- */
-.md-types__table table,
-.md-types__table pre,
-.md-types__table pre.md-code__content {
+.md-typeset table,
+.md-typeset pre,
+.md-typeset pre.md-code__pre {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
