@@ -1,0 +1,222 @@
+/* ==========================================================================
+   TSSR NEO+ — Responsive
+   ========================================================================== */
+
+/* -----------------------------------------------------------------------
+   Breakpoints Material for MkDocs
+   ----------------------------------------------------------------------- */
+@media screen and (max-width: 1220px) {
+  /* Tablette + : masquer le sommaire droit */
+  .md-sidebar--secondary {
+    display: none;
+  }
+
+  /* Le contenu central prend toute la largeur */
+  .md-content {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 76.1875em) {
+  /* Tablette : sidebar dans le drawer */
+  .md-sidebar--primary {
+    display: none;
+  }
+
+  /* Bouton menu visible */
+  .md-header__button--menu {
+    display: flex;
+  }
+
+  /* Le header reste compact */
+  .md-header__inner {
+    padding: 0 var(--tssr-space-sm, 8px);
+  }
+
+  /* Recherche réduite */
+  .md-search {
+    max-width: 240px;
+  }
+
+  /* Sidebar drawer */
+  .md-sidebar--primary {
+    z-index: 101;
+  }
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    background-color: var(--tssr-surface, #ffffff);
+    padding: var(--tssr-space-md, 16px);
+  }
+
+  [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap {
+    background-color: var(--tssr-surface, #1e1e2e);
+  }
+}
+
+@media screen and (max-width: 59.9375em) {
+  /* Petite tablette : recherche plus compacte */
+  .md-search {
+    max-width: 160px;
+  }
+
+  .md-search__input {
+    font-size: 0.8125rem;
+  }
+
+  .md-header__title {
+    font-size: 0.875rem;
+  }
+
+  /* Breadcrumb simplifié */
+  .md-breadcrumb {
+    font-size: 0.75rem;
+  }
+
+  .md-breadcrumb__list {
+    gap: 2px;
+  }
+}
+
+@media screen and (max-width: 45em) {
+  /* Mobile : header ultra compact */
+  .md-header__inner {
+    padding: 0 var(--tssr-space-xs, 4px);
+    height: 48px;
+  }
+
+  .md-header__button--menu {
+    order: 1;
+  }
+
+  .md-header__title {
+    font-size: 0.8125rem;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .md-search {
+    max-width: 140px;
+    order: 3;
+  }
+
+  .md-search__input {
+    font-size: 0.75rem;
+  }
+
+  .md-search__icon {
+    display: none;
+  }
+
+  /* Contenu moins padding */
+  .md-content {
+    padding: var(--tssr-space-md, 16px) var(--tssr-space-sm, 8px);
+  }
+
+  /* Titres plus petits */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  /* Navigation précédent/suivant empilée */
+  .md-footer__link {
+    padding: var(--tssr-space-sm, 8px) var(--tssr-space-sm, 8px);
+  }
+
+  .md-footer__link--prev {
+    text-align: left;
+    margin-bottom: var(--tssr-space-sm, 8px);
+  }
+
+  .md-footer__link--next {
+    text-align: right;
+  }
+
+  /* Breadcrumb très discret */
+  .md-breadcrumb {
+    font-size: 0.6875rem;
+    padding: var(--tssr-space-xs, 4px) 0;
+  }
+
+  /* Zones tactiles minimales 44px */
+  .md-nav__link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .md-footer__link {
+    min-height: 44px;
+  }
+
+  /* Scroll horizontal pour les tableaux */
+  .md-types__table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .md-types__table table {
+    min-width: 500px;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Petits mobiles (≤ 360px)
+   ----------------------------------------------------------------------- */
+@media screen and (max-width: 22.5em) {
+  .md-header__title {
+    font-size: 0.75rem;
+  }
+
+  .md-search {
+    max-width: 100px;
+  }
+
+  .md-content {
+    padding: var(--tssr-space-sm, 8px) var(--tssr-space-xs, 4px);
+  }
+
+  h1 {
+    font-size: 1.375rem;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Grand écran (≥ 1440px)
+   ----------------------------------------------------------------------- */
+@media screen and (min-width: 90em) {
+  .md-content {
+    padding: var(--tssr-space-xl, 40px) var(--tssr-space-lg, 24px);
+  }
+
+  .md-sidebar--primary {
+    padding-left: var(--tssr-space-md, 16px);
+  }
+
+  .md-sidebar--secondary {
+    padding-right: var(--tssr-space-md, 16px);
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Très grand écran (≥ 1600px)
+   ----------------------------------------------------------------------- */
+@media screen and (min-width: 100em) {
+  :root {
+    --tssr-max-width: 1280px;
+  }
+}

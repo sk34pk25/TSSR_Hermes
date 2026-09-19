@@ -54,6 +54,8 @@ theme:
 extra_css:
   - assets/stylesheets/tokens.css
   - assets/stylesheets/base.css
+  - assets/stylesheets/navigation.css
+  - assets/stylesheets/responsive.css
 
 plugins:
   - search
