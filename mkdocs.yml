@@ -1,4 +1,4 @@
-site_name: TSSR Hermes
+site_name: TSSR NEO+
 site_description: Documentation de la formation Technicien Supérieur Systèmes & Réseaux
 site_url: https://sk34pk25.github.io/TSSR_Hermes/
 repo_url: https://github.com/sk34pk25/TSSR_Hermes
@@ -58,6 +58,19 @@ markdown_extensions:
 
 nav:
   - Accueil: index.md
+  - Parcours: parcours/index.md
+  - Cours: cours/index.md
+  - Tutoriels: tutoriels/index.md
+  - Travaux pratiques: travaux-pratiques/index.md
+  - Exercices: exercices/index.md
+  - Kahoot: kahoot/index.md
+  - Révisions: revisions/index.md
+  - Mémos: memos/index.md
+  - Commandes: commandes/index.md
+  - Dépannage: depannage/index.md
+  - Glossaire: glossaire/index.md
+  - Ressources: ressources/index.md
+  - Index général: index-general/index.md
 
 extra:
   social:
