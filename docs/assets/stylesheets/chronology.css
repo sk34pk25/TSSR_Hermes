@@ -9,6 +9,11 @@
   padding: var(--tssr-space-lg) 0;
 }
 
+/* Override pour pages larges — la timeline peut dépasser 1100px */
+.tssr-chronology.tssr-wide {
+  max-width: 81.25rem; /* 1300px */
+}
+
 .tssr-chronology__header {
   text-align: center;
   margin-bottom: var(--tssr-space-xl);

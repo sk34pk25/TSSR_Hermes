@@ -18,7 +18,7 @@ Chaque étape de la formation est représentée ci-dessous dans une timeline ver
 
 ## Légende
 
-<div class="tssr-chronology">
+<div class="tssr-chronology tssr-wide">
   <div class="tssr-chronology__legend">
     <div class="tssr-chronology__legend-item">
       <span class="tssr-chronology__legend-dot tssr-chronology__legend-dot--cours"></span>
@@ -43,7 +43,7 @@ Chaque étape de la formation est représentée ci-dessous dans une timeline ver
 
 ## Timeline
 
-<div class="tssr-chronology">
+<div class="tssr-chronology tssr-wide">
   <ul class="tssr-timeline">
 
     <!-- ÉTAPE 1 : Active placeholder -->

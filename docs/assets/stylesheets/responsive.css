@@ -8,15 +8,9 @@
 */
 
 /* -----------------------------------------------------------------------
-   Grande résolution — contenu centré
+   Grande résolution — pas de contrainte sur .md-content
    ----------------------------------------------------------------------- */
-@media screen and (min-width: 1600px) {
-  .md-content {
-    max-width: 1100px;
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
+/* La largeur de lecture est gérée par .md-content__inner dans navigation.css */
 
 /* -----------------------------------------------------------------------
    Tablette — masquer le sommaire droit, contenu pleine largeur
@@ -71,5 +65,29 @@
 
   .md-footer__link-caption {
     font-size: 0.75rem;
+  }
+}
+
+/* -----------------------------------------------------------------------
+   Grille métriques / accès rapides — adaptatif
+   ----------------------------------------------------------------------- */
+@media screen and (max-width: 1024px) {
+  .tssr-metrics,
+  .tssr-quick-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tssr-metrics,
+  .tssr-quick-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tssr-metrics,
+  .tssr-quick-links {
+    grid-template-columns: 1fr;
   }
 }

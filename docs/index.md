@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation.toc
+  - toc
+---
+
 # TSSR NEO+
 
 ## Portail personnel de formation TSSR
@@ -7,7 +13,7 @@ Formation Technicien Supérieur Systèmes & Réseaux
 ---
 
 <div class="tssr-hero">
-  <div class="md-grid">
+  <div class="md-grid tssr-wide">
     <div class="tssr-hero__grid">
       <div class="tssr-hero__content">
         <span class="tssr-hero__badge">Portail personnel de formation TSSR</span>
@@ -72,7 +78,7 @@ Formation Technicien Supérieur Systèmes & Réseaux
 ## Métriques du portail
 
 <div class="tssr-metrics">
-  <div class="md-grid">
+  <div class="md-grid tssr-wide">
     <div class="tssr-metrics__grid">
       <div class="tssr-metric">
         <div class="tssr-metric__icon">
@@ -112,7 +118,7 @@ Formation Technicien Supérieur Systèmes & Réseaux
 
 <div class="tssr-quick-access">
   <h2 class="tssr-quick-access__title">Accès rapides</h2>
-  <div class="md-grid">
+  <div class="md-grid tssr-wide">
     <div class="tssr-quick-access__grid">
       <a href="cours/" class="tssr-card">
         <span class="tssr-card__icon">
