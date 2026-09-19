@@ -69,25 +69,25 @@
 }
 
 /* -----------------------------------------------------------------------
-   Grille métriques / accès rapides — adaptatif
+   Grilles homepage — adaptatif
    ----------------------------------------------------------------------- */
 @media screen and (max-width: 1024px) {
-  .tssr-metrics,
-  .tssr-quick-links {
+  .tssr-metrics__grid,
+  .tssr-quick-access__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
-  .tssr-metrics,
-  .tssr-quick-links {
+  .tssr-metrics__grid,
+  .tssr-quick-access__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 480px) {
-  .tssr-metrics,
-  .tssr-quick-links {
+  .tssr-metrics__grid,
+  .tssr-quick-access__grid {
     grid-template-columns: 1fr;
   }
 }

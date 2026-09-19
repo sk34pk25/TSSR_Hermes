@@ -100,10 +100,12 @@ markdown_extensions:
 nav:
   - Accueil: index.md
   - Parcours: parcours/index.md
-  - Cours: cours/index.md
-  - "  Cours exemple": cours/cours-exemple/index.md
-  - "  Module 01 — Exemple": cours/cours-exemple/module-01/index.md
-  - "  Module 02 — Exemple": cours/cours-exemple/module-02/index.md
+  - Cours:
+      - Cours: cours/index.md
+      - Cours exemple:
+          - Présentation: cours/cours-exemple/index.md
+          - Module 01 — Exemple: cours/cours-exemple/module-01/index.md
+          - Module 02 — Exemple: cours/cours-exemple/module-02/index.md
   - Tutoriels: tutoriels/index.md
   - Travaux pratiques: travaux-pratiques/index.md
   - Exercices: exercices/index.md

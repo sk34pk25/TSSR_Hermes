@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: var(--md-text-font-family, 'Inter'), var(--tssr-text, Inter), sans-serif;
+  font-family: var(--md-text-font-family, 'Inter'), 'Inter', sans-serif;
   line-height: 1.6;
   color: var(--tssr-text, #1a1a2e);
   background-color: var(--tssr-bg, #f5f7fa);
