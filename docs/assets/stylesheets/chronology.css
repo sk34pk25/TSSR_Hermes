@@ -1,0 +1,504 @@
+/* ==========================================================================
+   TSSR NEO+ — Parcours chronologique (timeline)
+   ======================================================================= */
+
+/* --- Conteneur principal --- */
+.tssr-chronology {
+  max-width: var(--tssr-max-width);
+  margin: 0 auto;
+  padding: var(--tssr-space-lg) 0;
+}
+
+.tssr-chronology__header {
+  text-align: center;
+  margin-bottom: var(--tssr-space-xl);
+}
+
+.tssr-chronology__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--tssr-text);
+  margin: 0 0 var(--tssr-space-sm);
+}
+
+.tssr-chronology__subtitle {
+  font-size: 1rem;
+  color: var(--tssr-text-secondary);
+  margin: 0 0 var(--tssr-space-md);
+  line-height: 1.5;
+}
+
+.tssr-chronology__badge {
+  display: inline-block;
+  padding: var(--tssr-space-xs) var(--tssr-space-md);
+  background-color: var(--tssr-warning);
+  color: #ffffff;
+  border-radius: var(--tssr-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* --- Légende --- */
+.tssr-chronology__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tssr-space-md);
+  justify-content: center;
+  margin-bottom: var(--tssr-space-xl);
+  padding: var(--tssr-space-md);
+  background-color: var(--tssr-surface-alt);
+  border-radius: var(--tssr-radius-md);
+  border: 1px solid var(--tssr-border-light);
+}
+
+.tssr-chronology__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--tssr-space-xs);
+  font-size: 0.85rem;
+  color: var(--tssr-text-secondary);
+}
+
+.tssr-chronology__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tssr-chronology__legend-dot--cours { background-color: var(--tssr-primary); }
+.tssr-chronology__legend-dot--module { background-color: var(--tssr-accent); }
+.tssr-chronology__legend-dot--tp { background-color: var(--tssr-success); }
+.tssr-chronology__legend-dot--revision { background-color: var(--tssr-warning); }
+
+/* --- Timeline verticale --- */
+.tssr-timeline {
+  position: relative;
+  padding-left: 48px;
+  list-style: none;
+  margin: 0;
+  padding-top: var(--tssr-space-md);
+  padding-bottom: var(--tssr-space-lg);
+}
+
+/* Ligne chronologique verticale */
+.tssr-timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    var(--tssr-primary-light),
+    var(--tssr-accent),
+    var(--tssr-primary)
+  );
+  border-radius: 2px;
+}
+
+/* --- Item de timeline --- */
+.tssr-timeline__item {
+  position: relative;
+  margin-bottom: var(--tssr-space-xl);
+}
+
+.tssr-timeline__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Marqueur sur la ligne */
+.tssr-timeline__marker {
+  position: absolute;
+  left: -40px;
+  top: 24px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--tssr-primary);
+  border: 3px solid var(--tssr-surface);
+  box-shadow: 0 0 0 2px var(--tssr-primary), var(--tssr-shadow-sm);
+  z-index: 1;
+}
+
+.tssr-timeline__item--active .tssr-timeline__marker {
+  background-color: var(--tssr-success);
+  box-shadow: 0 0 0 2px var(--tssr-success), var(--tssr-shadow-md);
+  animation: tssr-pulse 2s ease-in-out infinite;
+}
+
+.tssr-timeline__item--future .tssr-timeline__marker {
+  background-color: var(--tssr-text-muted);
+  box-shadow: 0 0 0 2px var(--tssr-text-muted), var(--tssr-shadow-sm);
+}
+
+@keyframes tssr-pulse {
+  0%, 100% { box-shadow: 0 0 0 2px var(--tssr-success), var(--tssr-shadow-md); }
+  50% { box-shadow: 0 0 0 6px rgba(46, 125, 50, 0.15), var(--tssr-shadow-md); }
+}
+
+/* --- Carte d'étape --- */
+.tssr-timeline__card {
+  background-color: var(--tssr-surface);
+  border: 1px solid var(--tssr-border);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-lg);
+  box-shadow: var(--tssr-shadow-sm);
+  transition: box-shadow var(--tssr-transition),
+              border-color var(--tssr-transition);
+}
+
+.tssr-timeline__card:hover {
+  box-shadow: var(--tssr-shadow-md);
+  border-color: var(--tssr-primary-light);
+}
+
+.tssr-timeline__card:focus-within {
+  border-color: var(--tssr-primary);
+  box-shadow: var(--tssr-shadow-md), 0 0 0 3px rgba(57, 73, 171, 0.15);
+}
+
+/* En-tête de carte */
+.tssr-timeline__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--tssr-space-md);
+  margin-bottom: var(--tssr-space-md);
+  flex-wrap: wrap;
+}
+
+.tssr-timeline__period {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tssr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.tssr-timeline__stage-badge {
+  display: inline-block;
+  padding: 2px var(--tssr-space-sm);
+  border-radius: var(--tssr-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.tssr-timeline__stage-badge--active {
+  background-color: rgba(46, 125, 50, 0.12);
+  color: var(--tssr-success);
+}
+
+.tssr-timeline__stage-badge--future {
+  background-color: rgba(120, 144, 156, 0.12);
+  color: var(--tssr-text-muted);
+}
+
+/* Corps de carte */
+.tssr-timeline__card-body {
+  margin-bottom: var(--tssr-space-md);
+}
+
+.tssr-timeline__course-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--tssr-text);
+  margin: 0 0 var(--tssr-space-sm);
+}
+
+.tssr-timeline__course-desc {
+  font-size: 0.9rem;
+  color: var(--tssr-text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Sections internes (modules, TP, révisions) */
+.tssr-timeline__sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--tssr-space-md);
+  margin-bottom: var(--tssr-space-md);
+}
+
+.tssr-timeline__section {
+  background-color: var(--tssr-surface-alt);
+  border: 1px solid var(--tssr-border-light);
+  border-radius: var(--tssr-radius-sm);
+  padding: var(--tssr-space-md);
+}
+
+.tssr-timeline__section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--tssr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--tssr-space-xs);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tssr-timeline__section-icon {
+  font-size: 1rem;
+}
+
+.tssr-timeline__section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-timeline__section-item {
+  display: flex;
+  align-items: center;
+  gap: var(--tssr-space-xs);
+  font-size: 0.85rem;
+  color: var(--tssr-text-secondary);
+  padding: 3px 0;
+}
+
+.tssr-timeline__section-item::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.tssr-timeline__section-item--module::before {
+  background-color: var(--tssr-accent);
+}
+
+.tssr-timeline__section-item--tp::before {
+  background-color: var(--tssr-success);
+}
+
+.tssr-timeline__section-item--revision::before {
+  background-color: var(--tssr-warning);
+}
+
+/* Placeholder badge */
+.tssr-timeline__placeholder {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background-color: rgba(245, 127, 23, 0.1);
+  color: var(--tssr-warning);
+  border-radius: var(--tssr-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Barre de progression (placeholder) */
+.tssr-timeline__progress {
+  margin-top: var(--tssr-space-md);
+  padding-top: var(--tssr-space-md);
+  border-top: 1px solid var(--tssr-border-light);
+}
+
+.tssr-timeline__progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--tssr-space-xs);
+}
+
+.tssr-timeline__progress-text {
+  font-size: 0.8rem;
+  color: var(--tssr-text-muted);
+}
+
+.tssr-timeline__progress-bar {
+  height: 6px;
+  background-color: var(--tssr-surface-alt);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.tssr-timeline__progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--tssr-primary), var(--tssr-accent));
+  transition: width 0.3s ease;
+}
+
+/* --- Footer placeholder --- */
+.tssr-chronology__footer {
+  text-align: center;
+  margin-top: var(--tssr-space-xl);
+  padding: var(--tssr-space-lg);
+  background-color: var(--tssr-surface-alt);
+  border-radius: var(--tssr-radius-md);
+  border: 1px dashed var(--tssr-border);
+}
+
+.tssr-chronology__footer-text {
+  font-size: 0.9rem;
+  color: var(--tssr-text-secondary);
+  margin: 0 0 var(--tssr-space-sm);
+}
+
+.tssr-chronology__footer-note {
+  font-size: 0.8rem;
+  color: var(--tssr-text-muted);
+  margin: 0;
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+/* --- Tablette (~768px) --- */
+@media screen and (max-width: 1024px) {
+  .tssr-timeline__sections {
+    grid-template-columns: 1fr;
+  }
+
+  .tssr-timeline__card-header {
+    flex-direction: column;
+  }
+}
+
+/* --- Mobile (~768px) --- */
+@media screen and (max-width: 768px) {
+  .tssr-chronology__title {
+    font-size: 1.5rem;
+  }
+
+  .tssr-timeline {
+    padding-left: 36px;
+  }
+
+  .tssr-timeline::before {
+    left: 14px;
+  }
+
+  .tssr-timeline__marker {
+    left: -34px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .tssr-timeline__card {
+    padding: var(--tssr-space-md);
+  }
+
+  .tssr-timeline__course-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- Mobile petit (~390px) --- */
+@media screen and (max-width: 390px) {
+  .tssr-chronology__title {
+    font-size: 1.25rem;
+  }
+
+  .tssr-chronology__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .tssr-timeline {
+    padding-left: 30px;
+  }
+
+  .tssr-timeline::before {
+    left: 10px;
+    width: 2px;
+  }
+
+  .tssr-timeline__marker {
+    left: -28px;
+    width: 12px;
+    height: 12px;
+  }
+
+  .tssr-timeline__card {
+    padding: var(--tssr-space-sm) var(--tssr-space-md);
+  }
+
+  .tssr-chronology__legend {
+    gap: var(--tssr-space-sm);
+    padding: var(--tssr-space-sm);
+  }
+
+  .tssr-chronology__legend-item {
+    font-size: 0.75rem;
+  }
+}
+
+/* --- Petit mobile (~360px) --- */
+@media screen and (max-width: 360px) {
+  .tssr-timeline {
+    padding-left: 26px;
+  }
+
+  .tssr-timeline::before {
+    left: 8px;
+    width: 2px;
+  }
+
+  .tssr-timeline__marker {
+    left: -24px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .tssr-timeline__card-body {
+    margin-bottom: var(--tssr-space-sm);
+  }
+}
+
+/* --- Large (~1440px) --- */
+@media screen and (min-width: 1440px) {
+  .tssr-chronology {
+    max-width: 1300px;
+  }
+
+  .tssr-timeline__sections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .tssr-timeline__marker {
+    animation: none;
+  }
+
+  .tssr-timeline__card,
+  .tssr-timeline__progress-fill {
+    transition: none;
+  }
+
+  @keyframes tssr-pulse {
+    0%, 100% { box-shadow: 0 0 0 2px var(--tssr-success), var(--tssr-shadow-md); }
+    50% { box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.1), var(--tssr-shadow-md); }
+  }
+}
+
+/* ==========================================================================
+   Focus clavier
+   ========================================================================== */
+.tssr-timeline__card:focus-visible {
+  outline: 3px solid var(--tssr-primary);
+  outline-offset: 2px;
+}
+
+.tssr-timeline__section:focus-within {
+  outline: 2px solid var(--tssr-accent);
+  outline-offset: 2px;
+}

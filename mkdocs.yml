@@ -55,6 +55,7 @@ extra_css:
   - assets/stylesheets/navigation.css
   - assets/stylesheets/responsive.css
   - assets/stylesheets/homepage.css
+  - assets/stylesheets/chronology.css
 
 plugins:
   - search
