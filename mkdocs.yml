@@ -54,6 +54,7 @@ extra_css:
   - assets/stylesheets/base.css
   - assets/stylesheets/navigation.css
   - assets/stylesheets/responsive.css
+  - assets/stylesheets/homepage.css
 
 plugins:
   - search
