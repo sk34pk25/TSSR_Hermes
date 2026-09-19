@@ -1,0 +1,589 @@
+/* ==========================================================================
+   TSSR NEO+ — Composants réutilisables
+   ====================================================================== */
+
+/* ==========================================================================
+   Badges
+   ========================================================================== */
+
+.tssr-badge {
+  display: inline-block;
+  font-size: var(--tssr-font-size-xs);
+  font-weight: var(--tssr-font-weight-semibold);
+  line-height: var(--tssr-line-height-tight);
+  padding: var(--tssr-spacing-1) var(--tssr-spacing-2);
+  border-radius: var(--tssr-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tssr-letter-spacing-wide);
+}
+
+.tssr-badge--fictional {
+  background: var(--tssr-warning-bg);
+  color: var(--tssr-warning-text);
+  border: 1px solid var(--tssr-warning-border);
+}
+
+.tssr-badge--active {
+  background: var(--tssr-success-bg);
+  color: var(--tssr-success-text);
+  border: 1px solid var(--tssr-success-border);
+}
+
+.tssr-badge--future {
+  background: var(--tssr-muted-bg);
+  color: var(--tssr-muted-text);
+  border: 1px solid var(--tssr-muted-border);
+}
+
+.tssr-badge--info {
+  background: var(--tssr-info-bg);
+  color: var(--tssr-info-text);
+  border: 1px solid var(--tssr-info-border);
+}
+
+/* ==========================================================================
+   États vides
+   ========================================================================== */
+
+.tssr-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--tssr-spacing-8) var(--tssr-spacing-4);
+  color: var(--tssr-muted-text);
+}
+
+.tssr-empty-state__icon {
+  font-size: var(--tssr-font-size-3xl);
+  margin-bottom: var(--tssr-spacing-3);
+  opacity: 0.5;
+}
+
+.tssr-empty-state__text {
+  font-size: var(--tssr-font-size-base);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Grille de cours
+   ========================================================================== */
+
+.tssr-course-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--tssr-spacing-5);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .tssr-course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .tssr-course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Carte de cours
+   ========================================================================== */
+
+.tssr-course-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-lg);
+  padding: var(--tssr-spacing-5);
+  transition: box-shadow var(--tssr-transition-speed) ease,
+              border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-course-card:hover {
+  box-shadow: var(--tssr-shadow-md);
+  border-color: var(--tssr-primary);
+}
+
+.tssr-course-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--tssr-spacing-3);
+  margin-bottom: var(--tssr-spacing-3);
+}
+
+.tssr-course-card__title {
+  font-size: var(--tssr-font-size-xl);
+  font-weight: var(--tssr-font-weight-bold);
+  color: var(--tssr-text-primary);
+  margin: 0;
+  line-height: var(--tssr-line-height-snug);
+}
+
+.tssr-course-card__domaine {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+  margin: 0 0 var(--tssr-spacing-2) 0;
+}
+
+.tssr-course-card__description {
+  font-size: var(--tssr-font-size-base);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: 0 0 var(--tssr-spacing-4) 0;
+  flex-grow: 1;
+}
+
+.tssr-course-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tssr-spacing-3);
+  margin-bottom: var(--tssr-spacing-4);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+}
+
+.tssr-course-card__modules-count {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-spacing-1);
+}
+
+.tssr-course-card__actions {
+  display: flex;
+  gap: var(--tssr-spacing-3);
+  margin-top: auto;
+}
+
+.tssr-course-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-spacing-2);
+  padding: var(--tssr-spacing-2) var(--tssr-spacing-4);
+  background: var(--tssr-primary);
+  color: var(--tssr-primary-text);
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--tssr-radius-md);
+  transition: background-color var(--tssr-transition-speed) ease,
+              transform var(--tssr-transition-speed) ease;
+}
+
+.tssr-course-card__link:hover,
+.tssr-course-card__link:focus-visible {
+  background: var(--tssr-primary-hover);
+  transform: translateY(-1px);
+  outline: 2px solid var(--tssr-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Objectifs
+   ========================================================================== */
+
+.tssr-objectives {
+  background: var(--tssr-info-bg);
+  border: 1px solid var(--tssr-info-border);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-spacing-4);
+  margin-bottom: var(--tssr-spacing-5);
+}
+
+.tssr-objectives__title {
+  font-size: var(--tssr-font-size-lg);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-spacing-3) 0;
+}
+
+.tssr-objectives__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-objectives__item {
+  position: relative;
+  padding-left: var(--tssr-spacing-5);
+  margin-bottom: var(--tssr-spacing-2);
+  font-size: var(--tssr-font-size-base);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+.tssr-objectives__item::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--tssr-info-text);
+  font-weight: var(--tssr-font-weight-bold);
+}
+
+/* ==========================================================================
+   Compétences, prérequis, environnement
+   ========================================================================== */
+
+.tssr-section {
+  margin-bottom: var(--tssr-spacing-6);
+}
+
+.tssr-section__title {
+  font-size: var(--tssr-font-size-xl);
+  font-weight: var(--tssr-font-weight-bold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-spacing-3) 0;
+  padding-bottom: var(--tssr-spacing-2);
+  border-bottom: 2px solid var(--tssr-primary);
+}
+
+.tssr-section__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-section__item {
+  padding: var(--tssr-spacing-2) 0;
+  padding-left: var(--tssr-spacing-5);
+  position: relative;
+  font-size: var(--tssr-font-size-base);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+.tssr-section__item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--tssr-primary);
+  font-weight: var(--tssr-font-weight-bold);
+}
+
+/* ==========================================================================
+   Grille de modules
+   ========================================================================== */
+
+.tssr-module-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--tssr-spacing-4);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .tssr-module-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   Carte de module
+   ========================================================================== */
+
+.tssr-module-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-lg);
+  padding: var(--tssr-spacing-5);
+  transition: box-shadow var(--tssr-transition-speed) ease,
+              border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-module-card:hover {
+  box-shadow: var(--tssr-shadow-md);
+  border-color: var(--tssr-secondary);
+}
+
+.tssr-module-card__number {
+  font-size: var(--tssr-font-size-xs);
+  font-weight: var(--tssr-font-weight-bold);
+  color: var(--tssr-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--tssr-letter-spacing-wide);
+  margin: 0 0 var(--tssr-spacing-1) 0;
+}
+
+.tssr-module-card__title {
+  font-size: var(--tssr-font-size-lg);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-spacing-2) 0;
+  line-height: var(--tssr-line-height-snug);
+}
+
+.tssr-module-card__desc {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: 0 0 var(--tssr-spacing-3) 0;
+  flex-grow: 1;
+}
+
+.tssr-module-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tssr-spacing-2);
+  margin-bottom: var(--tssr-spacing-3);
+}
+
+.tssr-module-card__meta-item {
+  font-size: var(--tssr-font-size-xs);
+  color: var(--tssr-muted-text);
+  background: var(--tssr-muted-bg);
+  padding: var(--tssr-spacing-1) var(--tssr-spacing-2);
+  border-radius: var(--tssr-radius-sm);
+}
+
+.tssr-module-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-spacing-2);
+  padding: var(--tssr-spacing-2) var(--tssr-spacing-4);
+  background: var(--tssr-secondary);
+  color: var(--tssr-secondary-text);
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--tssr-radius-md);
+  transition: background-color var(--tssr-transition-speed) ease,
+              transform var(--tssr-transition-speed) ease;
+  margin-top: auto;
+}
+
+.tssr-module-card__link:hover,
+.tssr-module-card__link:focus-visible {
+  background: var(--tssr-secondary-hover);
+  transform: translateY(-1px);
+  outline: 2px solid var(--tssr-secondary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Navigation module (précédent / suivant)
+   ========================================================================== */
+
+.tssr-module-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--tssr-spacing-3);
+  margin-top: var(--tssr-spacing-6);
+  padding-top: var(--tssr-spacing-5);
+  border-top: 1px solid var(--tssr-border-color);
+}
+
+.tssr-module-navigation__prev,
+.tssr-module-navigation__next {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-spacing-2);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  text-decoration: none;
+  padding: var(--tssr-spacing-2) var(--tssr-spacing-3);
+  border-radius: var(--tssr-radius-md);
+  transition: color var(--tssr-transition-speed) ease,
+              background-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-module-navigation__prev:hover,
+.tssr-module-navigation__prev:focus-visible,
+.tssr-module-navigation__next:hover,
+.tssr-module-navigation__next:focus-visible {
+  color: var(--tssr-primary);
+  background: var(--tssr-primary-bg);
+  outline: 2px solid var(--tssr-primary);
+  outline-offset: 2px;
+}
+
+.tssr-module-navigation__home {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+}
+
+/* ==========================================================================
+   Ressources liées
+   ========================================================================== */
+
+.tssr-related-resources {
+  background: var(--tssr-muted-bg);
+  border: 1px solid var(--tssr-muted-border);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-spacing-4);
+  margin-top: var(--tssr-spacing-5);
+}
+
+.tssr-related-resources__title {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-spacing-3) 0;
+}
+
+.tssr-related-resources__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-related-resources__item {
+  margin-bottom: var(--tssr-spacing-2);
+}
+
+.tssr-related-resources__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-spacing-2);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  text-decoration: none;
+  padding: var(--tssr-spacing-1) 0;
+  transition: color var(--tssr-transition-speed) ease;
+}
+
+.tssr-related-resources__link:hover,
+.tssr-related-resources__link:focus-visible {
+  color: var(--tssr-primary);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Breadcrumb
+   ========================================================================== */
+
+.tssr-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--tssr-spacing-2);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+  margin-bottom: var(--tssr-spacing-5);
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+.tssr-breadcrumb__separator {
+  color: var(--tssr-muted-text);
+  opacity: 0.5;
+}
+
+.tssr-breadcrumb__link {
+  color: var(--tssr-primary);
+  text-decoration: none;
+  transition: color var(--tssr-transition-speed) ease;
+}
+
+.tssr-breadcrumb__link:hover,
+.tssr-breadcrumb__link:focus-visible {
+  color: var(--tssr-primary-hover);
+  text-decoration: underline;
+  outline: none;
+}
+
+.tssr-breadcrumb__current {
+  color: var(--tssr-text-secondary);
+}
+
+/* ==========================================================================
+   Focus visible
+   ========================================================================== */
+
+.tssr-course-card:focus-visible,
+.tssr-module-card:focus-visible {
+  outline: 3px solid var(--tssr-primary);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .tssr-course-card,
+  .tssr-module-card {
+    transition: none;
+  }
+
+  .tssr-course-card__link,
+  .tssr-module-card__link,
+  .tssr-module-navigation__prev,
+  .tssr-module-navigation__next,
+  .tssr-related-resources__link,
+  .tssr-breadcrumb__link {
+    transition: none;
+  }
+
+  .tssr-course-card__link:hover,
+  .tssr-module-card__link:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 767px) {
+  .tssr-module-navigation {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .tssr-course-card__actions {
+    flex-direction: column;
+  }
+
+  .tssr-course-card__link,
+  .tssr-module-card__link {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 390px) {
+  .tssr-course-card {
+    padding: var(--tssr-spacing-4);
+  }
+
+  .tssr-module-card {
+    padding: var(--tssr-spacing-4);
+  }
+
+  .tssr-badge {
+    font-size: var(--tssr-font-size-xs);
+    padding: var(--tssr-spacing-1) var(--tssr-spacing-1);
+  }
+}
+
+@media (max-width: 360px) {
+  .tssr-course-grid,
+  .tssr-module-grid {
+    gap: var(--tssr-spacing-3);
+  }
+
+  .tssr-course-card,
+  .tssr-module-card {
+    padding: var(--tssr-spacing-3);
+  }
+}
+
+@media (min-width: 1440px) {
+  .tssr-course-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
