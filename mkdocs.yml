@@ -49,6 +49,11 @@ theme:
   icon:
     repo: fontawesome/brands/github
     logo: material/school
+  custom_dir: docs/assets
+
+extra_css:
+  - assets/stylesheets/tokens.css
+  - assets/stylesheets/base.css
 
 plugins:
   - search

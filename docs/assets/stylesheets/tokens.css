@@ -1,0 +1,115 @@
+/* ==========================================================================
+   TSSR NEO+ — Design System Tokens
+   Fondations visuelles globales
+   ========================================================================== */
+
+/* --- Thème clair (par défaut) --- */
+:root,
+[data-md-color-scheme="default"] {
+  /* Primaires */
+  --tssr-primary:        #3949ab;
+  --tssr-primary-light:  #5e6cc2;
+  --tssr-primary-dark:   #283593;
+
+  /* Accent */
+  --tssr-accent:         #00bcd4;
+  --tssr-accent-light:   #4dd0e1;
+  --tssr-accent-dark:    #00838f;
+
+  /* Arrière-plans & surfaces */
+  --tssr-bg:             #f5f7fa;
+  --tssr-surface:        #ffffff;
+  --tssr-surface-alt:    #eef1f5;
+
+  /* Texte */
+  --tssr-text:           #1a1a2e;
+  --tssr-text-secondary: #546e7a;
+  --tssr-text-muted:     #78909c;
+
+  /* Bordures */
+  --tssr-border:         #cfd8dc;
+  --tssr-border-light:   #eceff1;
+
+  /* Sémantique */
+  --tssr-success:        #2e7d32;
+  --tssr-warning:        #f57f17;
+  --tssr-danger:         #c62828;
+  --tssr-info:           #0277bd;
+
+  /* Ombres */
+  --tssr-shadow-sm:      0 1px 3px rgba(0,0,0,.08);
+  --tssr-shadow-md:      0 4px 12px rgba(0,0,0,.10);
+
+  /* Espacements */
+  --tssr-space-xs:       4px;
+  --tssr-space-sm:       8px;
+  --tssr-space-md:       16px;
+  --tssr-space-lg:       24px;
+  --tssr-space-xl:       40px;
+
+  /* Rayons de bordure */
+  --tssr-radius-sm:      4px;
+  --tssr-radius-md:      8px;
+  --tssr-radius-lg:      12px;
+
+  /* Largeur maximale du contenu */
+  --tssr-max-width:      1100px;
+
+  /* Transitions */
+  --tssr-transition:     200ms ease;
+}
+
+/* --- Thème sombre slate --- */
+[data-md-color-scheme="slate"] {
+  /* Primaires */
+  --tssr-primary:        #7986cb;
+  --tssr-primary-light:  #9fa8da;
+  --tssr-primary-dark:   #5c6bc0;
+
+  /* Accent */
+  --tssr-accent:         #4dd0e1;
+  --tssr-accent-light:   #80deea;
+  --tssr-accent-dark:    #00acc1;
+
+  /* Arrière-plans & surfaces */
+  --tssr-bg:             #121212;
+  --tssr-surface:        #1e1e2e;
+  --tssr-surface-alt:    #252538;
+
+  /* Texte */
+  --tssr-text:           #e0e6ed;
+  --tssr-text-secondary: #90a4ae;
+  --tssr-text-muted:     #607d8b;
+
+  /* Bordures */
+  --tssr-border:         #37474f;
+  --tssr-border-light:   #263238;
+
+  /* Sémantique */
+  --tssr-success:        #66bb6a;
+  --tssr-warning:        #ffb74d;
+  --tssr-danger:         #ef5350;
+  --tssr-info:           #4fc3f7;
+
+  /* Ombres */
+  --tssr-shadow-sm:      0 1px 3px rgba(0,0,0,.3);
+  --tssr-shadow-md:      0 4px 12px rgba(0,0,0,.4);
+
+  /* Espacements — identiques aux deux thèmes */
+  --tssr-space-xs:       4px;
+  --tssr-space-sm:       8px;
+  --tssr-space-md:       16px;
+  --tssr-space-lg:       24px;
+  --tssr-space-xl:       40px;
+
+  /* Rayons — identiques */
+  --tssr-radius-sm:      4px;
+  --tssr-radius-md:      8px;
+  --tssr-radius-lg:      12px;
+
+  /* Largeur — identique */
+  --tssr-max-width:      1100px;
+
+  /* Transitions — identiques */
+  --tssr-transition:     200ms ease;
+}
