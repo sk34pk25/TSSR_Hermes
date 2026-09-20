@@ -141,7 +141,7 @@
   <a class="tssr-tp-card__link" href="/cours/cours-exemple/module-02/">
     Module 02 — Exemple →
   </a>
-  <span class="tssr-tp-card__link" style="opacity: 0.5; cursor: not-allowed;">
-    Kahoot (futur)
-  </span>
+  <a class="tssr-tp-card__link" href="https://kahoot.it/replay/eafbefc2-9e44-434e-beda-36fdb6a1527f">
+    Kahoot →
+  </a>
 </div>

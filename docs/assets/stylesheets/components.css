@@ -1157,3 +1157,137 @@
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+/* ==========================================================================
+   Kahoot — Composants TSSR NEO+
+   ========================================================================== */
+
+.tssr-kahoot-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--tssr-space-lg);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .tssr-kahoot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tssr-kahoot-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-lg);
+  padding: var(--tssr-space-lg);
+  transition: box-shadow var(--tssr-transition-speed) ease,
+              border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-kahoot-card:hover {
+  box-shadow: var(--tssr-shadow-md);
+  border-color: var(--tssr-primary);
+}
+
+.tssr-kahoot-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tssr-space-sm);
+  margin-bottom: var(--tssr-space-md);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+}
+
+.tssr-kahoot-question {
+  background: var(--tssr-info-bg);
+  border: 1px solid var(--tssr-info-border);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin-bottom: var(--tssr-space-md);
+}
+
+.tssr-kahoot-choices {
+  list-style: none;
+  padding: 0;
+  margin: var(--tssr-space-sm) 0;
+}
+
+.tssr-kahoot-answer {
+  padding: var(--tssr-space-xs) var(--tssr-space-sm);
+  margin-bottom: var(--tssr-space-xs);
+  border-radius: var(--tssr-radius-sm);
+  font-size: var(--tssr-font-size-sm);
+}
+
+.tssr-kahoot-answer--correct {
+  background: var(--tssr-success-bg);
+  color: var(--tssr-success-text);
+  border-left: 3px solid var(--tssr-success);
+}
+
+.tssr-kahoot-answer--wrong {
+  background: var(--tssr-muted-bg);
+  color: var(--tssr-text-secondary);
+  border-left: 3px solid var(--tssr-muted-border);
+}
+
+.tssr-kahoot-explanation {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  font-style: italic;
+  margin-top: var(--tssr-space-sm);
+  padding-top: var(--tssr-space-sm);
+  border-top: 1px solid var(--tssr-border-color);
+}
+
+.tssr-kahoot-sync {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-space-xs);
+  font-size: var(--tssr-font-size-xs);
+  padding: var(--tssr-space-xs) var(--tssr-space-sm);
+  border-radius: var(--tssr-radius-sm);
+}
+
+.tssr-kahoot-sync--synced {
+  background: var(--tssr-success-bg);
+  color: var(--tssr-success-text);
+}
+
+.tssr-kahoot-sync--pending {
+  background: var(--tssr-warning-bg);
+  color: var(--tssr-warning-text);
+}
+
+.tssr-kahoot-sync--error {
+  background: var(--tssr-error-bg);
+  color: var(--tssr-error-text);
+}
+
+.tssr-kahoot-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-space-sm);
+  padding: var(--tssr-space-sm) var(--tssr-space-md);
+  background: var(--tssr-primary);
+  color: var(--tssr-primary-text);
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--tssr-radius-md);
+  transition: background-color var(--tssr-transition-speed) ease,
+              transform var(--tssr-transition-speed) ease;
+  margin-top: auto;
+}
+
+.tssr-kahoot-card__link:hover,
+.tssr-kahoot-card__link:focus-visible {
+  background: var(--tssr-primary-hover);
+  transform: translateY(-1px);
+  outline: 2px solid var(--tssr-primary);
+  outline-offset: 2px;
+}

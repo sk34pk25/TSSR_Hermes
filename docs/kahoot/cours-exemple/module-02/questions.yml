@@ -1,0 +1,42 @@
+schema_version: 1
+course_id: cours-exemple
+module_id: module-02
+title: "Kahoot — Module 02 — Exemple"
+question_count: 3
+kahoot:
+  remote_id: "eafbefc2-9e44-434e-beda-36fdb6a1527f"
+  remote_url: "https://kahoot.it/replay/eafbefc2-9e44-434e-beda-36fdb6a1527f"
+questions:
+  - id: q01
+    type: true_false
+    question: "SSH utilise le port 22 par défaut."
+    correct: true
+    explanation: "SSH (Secure Shell) utilise le port TCP 22 par défaut pour les connexions chiffrées."
+    topic: "réseau"
+    provenance: "cours/cours-exemple/module-02/index.md"
+
+  - id: q02
+    type: quiz
+    question: "Quel protocole sécurise les échanges web ?"
+    choices:
+      - "FTP"
+      - "HTTP"
+      - "HTTPS"
+      - "Telnet"
+    correct: 3
+    explanation: "HTTPS (HTTP over TLS/SSL) chiffre les communications entre le navigateur et le serveur web."
+    topic: "sécurité"
+    provenance: "cours/cours-exemple/module-02/index.md"
+
+  - id: q03
+    type: quiz
+    question: "Que signifie le 'S' dans SSH ?"
+    choices:
+      - "Secure Shell"
+      - "System Host"
+      - "Standard Shell"
+      - "Server Socket"
+    correct: 1
+    explanation: "SSH signifie Secure Shell — un protocole de connexion sécurisée à distance."
+    topic: "commandes-linux"
+    provenance: "cours/cours-exemple/module-02/index.md"

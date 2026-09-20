@@ -1,0 +1,42 @@
+schema_version: 1
+course_id: cours-exemple
+module_id: module-01
+title: "Kahoot — Module 01 — Exemple"
+question_count: 3
+kahoot:
+  remote_id: "3f60f90a-7967-4b3b-a67f-f1b696af3065"
+  remote_url: "https://kahoot.it/replay/3f60f90a-7967-4b3b-a67f-f1b696af3065"
+questions:
+  - id: q01
+    type: quiz
+    question: "Quel est le système de fichiers racine sous Linux ?"
+    choices:
+      - "rootfs"
+      - "/"
+      - "/boot"
+      - "/home"
+    correct: 2
+    explanation: "En Linux, la racine du système de fichiers est représentée par '/'."
+    topic: "systèmes-de-fichiers"
+    provenance: "cours/cours-exemple/module-01/index.md"
+
+  - id: q02
+    type: true_false
+    question: "La commande 'ls -la' affiche les fichiers cachés."
+    correct: true
+    explanation: "L'option '-a' (all) inclut les fichiers dont le nom commence par un point."
+    topic: "commandes-linux"
+    provenance: "cours/cours-exemple/module-01/index.md"
+
+  - id: q03
+    type: quiz
+    question: "Que fait la commande 'cd ..' ?"
+    choices:
+      - "Monte d'un cran dans l'arborescence"
+      - "Descend dans le dossier courant"
+      - "Supprime le dossier courant"
+      - "Affiche le chemin courant"
+    correct: 1
+    explanation: "'..' représente le répertoire parent. 'cd ..' remonte d'un niveau."
+    topic: "commandes-linux"
+    provenance: "cours/cours-exemple/module-01/index.md"

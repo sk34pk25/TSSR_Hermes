@@ -122,7 +122,13 @@ nav:
               - Exercices: exercices/cours-exemple/module-01/index.md
           - Module 02 — Exemple:
               - Exercices: exercices/cours-exemple/module-02/index.md
-  - Kahoot: kahoot/index.md
+  - Kahoot:
+    - Kahoot: kahoot/index.md
+    - Cours exemple:
+      - Module 01 — Exemple:
+        - Kahoot: kahoot/cours-exemple/module-01/index.md
+      - Module 02 — Exemple:
+        - Kahoot: kahoot/cours-exemple/module-02/index.md
   - Révisions:
       - Révisions: revisions/index.md
       - Cours exemple:
