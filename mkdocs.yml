@@ -117,7 +117,13 @@ nav:
                   - Correction: travaux-pratiques/cours-exemple/module-01/tp-exemple/correction.md
   - Exercices: exercices/index.md
   - Kahoot: kahoot/index.md
-  - Révisions: revisions/index.md
+  - Révisions:
+      - Révisions: revisions/index.md
+      - Cours exemple:
+          - Module 01 — Exemple:
+              - Révision: revisions/cours-exemple/module-01/index.md
+          - Module 02 — Exemple:
+              - Révision: revisions/cours-exemple/module-02/index.md
   - Mémos: memos/index.md
   - Commandes: commandes/index.md
   - Dépannage: depannage/index.md
