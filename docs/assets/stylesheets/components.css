@@ -845,6 +845,232 @@
 }
 
 /* ==========================================================================
+   Exercices
+   ========================================================================== */
+
+.tssr-exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tssr-space-lg);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-exercise-card {
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-lg);
+  padding: var(--tssr-space-lg);
+  transition: box-shadow var(--tssr-transition-speed) ease,
+              border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-exercise-card:hover {
+  box-shadow: var(--tssr-shadow-sm);
+  border-color: var(--tssr-info-border);
+}
+
+.tssr-exercise-type {
+  display: inline-block;
+  font-size: var(--tssr-font-size-xs);
+  font-weight: var(--tssr-font-weight-semibold);
+  line-height: var(--tssr-line-height-tight);
+  padding: var(--tssr-space-xs) var(--tssr-space-sm);
+  border-radius: var(--tssr-radius-sm);
+  text-transform: uppercase;
+  letter-spacing: var(--tssr-letter-spacing-wide);
+  margin-bottom: var(--tssr-space-sm);
+  background: var(--tssr-info-bg);
+  color: var(--tssr-info-text);
+  border: 1px solid var(--tssr-info-border);
+}
+
+.tssr-exercise-question {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-space-md) 0;
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+.tssr-exercise-options {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--tssr-space-md) 0;
+}
+
+.tssr-exercise-options__item {
+  position: relative;
+  padding: var(--tssr-space-sm) var(--tssr-space-md);
+  margin-bottom: var(--tssr-space-xs);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-md);
+  background: var(--tssr-bg-secondary);
+  transition: border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-exercise-options__item:hover {
+  border-color: var(--tssr-info-border);
+}
+
+.tssr-exercise-options__item::before {
+  content: "○";
+  position: absolute;
+  left: var(--tssr-space-sm);
+  color: var(--tssr-muted-text);
+}
+
+.tssr-exercise-answer {
+  background: var(--tssr-success-bg);
+  border: 1px solid var(--tssr-success-border);
+  border-left: 4px solid var(--tssr-success);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin-top: var(--tssr-space-md);
+}
+
+.tssr-exercise-answer__title {
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-success-text);
+  margin: 0 0 var(--tssr-space-xs) 0;
+}
+
+.tssr-exercise-answer__content {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: 0;
+}
+
+.tssr-exercise-explanation {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+  font-style: italic;
+  margin: var(--tssr-space-sm) 0 0 0;
+  padding-left: var(--tssr-space-lg);
+  border-left: 2px solid var(--tssr-muted-border);
+}
+
+/* Exercices : détails / résumé */
+.tssr-exercise-card details {
+  margin-top: var(--tssr-space-md);
+}
+
+.tssr-exercise-card summary {
+  cursor: pointer;
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-info);
+  padding: var(--tssr-space-sm) 0;
+  user-select: none;
+  transition: color var(--tssr-transition-speed) ease;
+}
+
+.tssr-exercise-card summary:hover,
+.tssr-exercise-card summary:focus-visible {
+  color: var(--tssr-info-hover);
+  outline: 2px solid var(--tssr-info);
+  outline-offset: 2px;
+  border-radius: var(--tssr-radius-sm);
+}
+
+.tssr-exercise-card details[open] summary {
+  margin-bottom: var(--tssr-space-sm);
+}
+
+/* Exercices : ordre des étapes */
+.tssr-exercise-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--tssr-space-md) 0;
+  counter-reset: exercise-step;
+}
+
+.tssr-exercise-steps__item {
+  counter-increment: exercise-step;
+  position: relative;
+  padding: var(--tssr-space-sm) var(--tssr-space-md) var(--tssr-space-sm) var(--tssr-space-2xl);
+  margin-bottom: var(--tssr-space-xs);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-md);
+  background: var(--tssr-bg-secondary);
+}
+
+.tssr-exercise-steps__item::before {
+  content: counter(exercise-step);
+  position: absolute;
+  left: var(--tssr-space-sm);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--tssr-font-size-xs);
+  font-weight: var(--tssr-font-weight-bold);
+  color: var(--tssr-text-primary);
+  background: var(--tssr-muted-bg);
+  border-radius: 50%;
+}
+
+/* Exercices : indice */
+.tssr-exercise-hint {
+  background: var(--tssr-warning-bg);
+  border: 1px solid var(--tssr-warning-border);
+  border-left: 4px solid var(--tssr-warning);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-sm) var(--tssr-space-md);
+  margin-bottom: var(--tssr-space-md);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-warning-text);
+}
+
+/* Exercices : difficulté */
+.tssr-exercise-difficulty {
+  display: inline-block;
+  font-size: var(--tssr-font-size-xs);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-muted-text);
+  margin-left: var(--tssr-space-sm);
+}
+
+/* Exercices : responsive */
+@media (max-width: 767px) {
+  .tssr-exercise-card {
+    padding: var(--tssr-space-md);
+  }
+
+  .tssr-exercise-options__item {
+    padding-left: var(--tssr-space-xl);
+  }
+}
+
+@media (max-width: 390px) {
+  .tssr-exercise-card {
+    padding: var(--tssr-space-sm);
+  }
+
+  .tssr-exercise-question {
+    font-size: var(--tssr-font-size-sm);
+  }
+
+  .tssr-exercise-options__item,
+  .tssr-exercise-steps__item {
+    font-size: var(--tssr-font-size-xs);
+    padding: var(--tssr-space-xs) var(--tssr-space-sm) var(--tssr-space-xs) var(--tssr-space-2xl);
+  }
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 

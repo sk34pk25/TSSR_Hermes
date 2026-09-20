@@ -115,7 +115,13 @@ nav:
                   - Présentation: travaux-pratiques/cours-exemple/module-01/tp-exemple/index.md
                   - Énoncé: travaux-pratiques/cours-exemple/module-01/tp-exemple/enonce.md
                   - Correction: travaux-pratiques/cours-exemple/module-01/tp-exemple/correction.md
-  - Exercices: exercices/index.md
+  - Exercices:
+      - Exercices: exercices/index.md
+      - Cours exemple:
+          - Module 01 — Exemple:
+              - Exercices: exercices/cours-exemple/module-01/index.md
+          - Module 02 — Exemple:
+              - Exercices: exercices/cours-exemple/module-02/index.md
   - Kahoot: kahoot/index.md
   - Révisions:
       - Révisions: revisions/index.md

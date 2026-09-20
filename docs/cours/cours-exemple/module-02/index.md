@@ -141,6 +141,32 @@
 
 ---
 
+## Exercices
+
+<div class="tssr-section">
+  <h2 class="tssr-section__title">Exercices</h2>
+  <div class="tssr-tp-card">
+    <div class="tssr-tp-card__header">
+      <div>
+        <h3 class="tssr-tp-card__title">Exercices — Module 02</h3>
+        <p class="tssr-tp-card__desc">
+          Question courte, ordre des étapes, interprétation de résultat — exercices courts et ciblés.
+        </p>
+      </div>
+      <span class="tssr-badge tssr-badge--fictional">Donnée fictive</span>
+    </div>
+    <div class="tssr-tp-meta">
+      <span class="tssr-tp-meta__item">Type : exercices courts</span>
+      <span class="tssr-tp-meta__item">Difficulté : débutant</span>
+    </div>
+    <a class="tssr-tp-card__link" href="/exercices/cours-exemple/module-02/">
+      Accéder aux exercices →
+    </a>
+  </div>
+</div>
+
+---
+
 ## Dépannage
 
 <div class="tssr-section">
