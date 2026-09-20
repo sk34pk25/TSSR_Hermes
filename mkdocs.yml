@@ -107,7 +107,14 @@ nav:
           - Module 01 — Exemple: cours/cours-exemple/module-01/index.md
           - Module 02 — Exemple: cours/cours-exemple/module-02/index.md
   - Tutoriels: tutoriels/index.md
-  - Travaux pratiques: travaux-pratiques/index.md
+  - Travaux pratiques:
+      - Travaux pratiques: travaux-pratiques/index.md
+      - Cours exemple:
+          - Module 01 — Exemple:
+              - TP exemple:
+                  - Présentation: travaux-pratiques/cours-exemple/module-01/tp-exemple/index.md
+                  - Énoncé: travaux-pratiques/cours-exemple/module-01/tp-exemple/enonce.md
+                  - Correction: travaux-pratiques/cours-exemple/module-01/tp-exemple/correction.md
   - Exercices: exercices/index.md
   - Kahoot: kahoot/index.md
   - Révisions: revisions/index.md

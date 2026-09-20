@@ -136,7 +136,24 @@
 
 <div class="tssr-section">
   <h2 class="tssr-section__title">TP</h2>
-  <p class="tssr-section__item">Placeholder — TP à définir</p>
+  <div class="tssr-tp-card">
+    <div class="tssr-tp-card__header">
+      <div>
+        <h3 class="tssr-tp-card__title">TP exemple</h3>
+        <p class="tssr-tp-card__desc">
+          TP de démonstration — configuration d'un service réseau de base sur Linux.
+        </p>
+      </div>
+      <span class="tssr-badge tssr-badge--fictional">Donnée fictive</span>
+    </div>
+    <div class="tssr-tp-meta">
+      <span class="tssr-tp-meta__item">Durée estimée : 45 minutes</span>
+      <span class="tssr-tp-meta__item">Niveau : débutant</span>
+    </div>
+    <a class="tssr-tp-card__link" href="/travaux-pratiques/cours-exemple/module-01/tp-exemple/">
+      Accéder au TP >
+    </a>
+  </div>
 </div>
 
 ---

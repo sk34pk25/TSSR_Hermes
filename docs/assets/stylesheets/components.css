@@ -504,7 +504,8 @@
    ========================================================================== */
 
 .tssr-course-card:focus-visible,
-.tssr-module-card:focus-visible {
+.tssr-module-card:focus-visible,
+.tssr-tp-card:focus-within {
   outline: 3px solid var(--tssr-primary);
   outline-offset: 3px;
 }
@@ -535,6 +536,315 @@
 }
 
 /* ==========================================================================
+   Travaux pratiques — Carte TP
+   ========================================================================== */
+
+.tssr-tp-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-primary-border);
+  border-radius: var(--tssr-radius-lg);
+  padding: var(--tssr-space-lg);
+  transition: box-shadow var(--tssr-transition-speed) ease,
+              border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-tp-card:hover {
+  box-shadow: var(--tssr-shadow-md);
+  border-color: var(--tssr-primary);
+}
+
+.tssr-tp-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--tssr-space-md);
+  margin-bottom: var(--tssr-space-md);
+}
+
+.tssr-tp-card__title {
+  font-size: var(--tssr-font-size-lg);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0;
+  line-height: var(--tssr-line-height-snug);
+}
+
+.tssr-tp-card__desc {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: var(--tssr-space-xs) 0 0 0;
+}
+
+.tssr-tp-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-space-sm);
+  padding: var(--tssr-space-sm) var(--tssr-space-md);
+  background: var(--tssr-primary);
+  color: var(--tssr-primary-text);
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--tssr-radius-md);
+  transition: background-color var(--tssr-transition-speed) ease,
+              transform var(--tssr-transition-speed) ease;
+  margin-top: var(--tssr-space-md);
+  align-self: flex-start;
+}
+
+.tssr-tp-card__link:hover,
+.tssr-tp-card__link:focus-visible {
+  background: var(--tssr-primary-hover);
+  transform: translateY(-1px);
+  outline: 2px solid var(--tssr-primary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Travaux pratiques — Métadonnées
+   ========================================================================== */
+
+.tssr-tp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tssr-space-sm);
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-muted-text);
+}
+
+.tssr-tp-meta__item {
+  background: var(--tssr-muted-bg);
+  padding: var(--tssr-space-xs) var(--tssr-space-sm);
+  border-radius: var(--tssr-radius-sm);
+}
+
+.tssr-tp-meta__item a {
+  color: var(--tssr-primary);
+  text-decoration: none;
+}
+
+.tssr-tp-meta__item a:hover,
+.tssr-tp-meta__item a:focus-visible {
+  color: var(--tssr-primary-hover);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Travaux pratiques — Environnement
+   ========================================================================== */
+
+.tssr-tp-environment {
+  background: var(--tssr-info-bg);
+  border: 1px solid var(--tssr-info-border);
+  border-left: 4px solid var(--tssr-info);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin: var(--tssr-space-md) 0;
+}
+
+.tssr-tp-environment__title {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-info-text);
+  margin: 0 0 var(--tssr-space-sm) 0;
+}
+
+.tssr-tp-environment__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-tp-environment__item {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  padding: var(--tssr-space-xs) 0;
+  padding-left: var(--tssr-space-lg);
+  position: relative;
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+.tssr-tp-environment__item::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--tssr-info);
+  font-weight: var(--tssr-font-weight-bold);
+}
+
+/* ==========================================================================
+   Travaux pratiques — Résultat attendu
+   ========================================================================== */
+
+.tssr-expected-result {
+  background: var(--tssr-success-bg);
+  border: 1px solid var(--tssr-success-border);
+  border-left: 4px solid var(--tssr-success);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin: var(--tssr-space-md) 0;
+}
+
+.tssr-expected-result__title {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-success-text);
+  margin: 0 0 var(--tssr-space-sm) 0;
+}
+
+.tssr-expected-result__text {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Travaux pratiques — Vérification
+   ========================================================================== */
+
+.tssr-verification {
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-border-color);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin: var(--tssr-space-md) 0;
+}
+
+.tssr-verification__title {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-space-sm) 0;
+  padding-bottom: var(--tssr-space-sm);
+  border-bottom: 1px solid var(--tssr-border-color);
+}
+
+.tssr-verification__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-verification__item {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  padding: var(--tssr-space-xs) 0;
+  padding-left: var(--tssr-space-lg);
+  position: relative;
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+.tssr-verification__item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--tssr-success);
+  font-weight: var(--tssr-font-weight-bold);
+}
+
+/* ==========================================================================
+   Travaux pratiques — Indice
+   ========================================================================== */
+
+.tssr-hint {
+  background: var(--tssr-warning-bg);
+  border: 1px solid var(--tssr-warning-border);
+  border-left: 4px solid var(--tssr-warning);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin: var(--tssr-space-md) 0;
+}
+
+.tssr-hint__title {
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-warning-text);
+  margin: 0 0 var(--tssr-space-xs) 0;
+}
+
+.tssr-hint__text {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: 0;
+}
+
+/* ==========================================================================
+   Travaux pratiques — Solution
+   ========================================================================== */
+
+.tssr-solution {
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-primary-border);
+  border-left: 4px solid var(--tssr-primary);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin: var(--tssr-space-md) 0;
+}
+
+.tssr-solution__title {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-primary);
+  margin: 0 0 var(--tssr-space-sm) 0;
+  padding-bottom: var(--tssr-space-sm);
+  border-bottom: 1px solid var(--tssr-border-color);
+}
+
+.tssr-solution__content {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+/* ==========================================================================
+   Travaux pratiques — Erreurs fréquentes
+   ========================================================================== */
+
+.tssr-error-common {
+  background: var(--tssr-danger-bg);
+  border: 1px solid var(--tssr-danger-border);
+  border-left: 4px solid var(--tssr-danger);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md);
+  margin: var(--tssr-space-md) 0;
+}
+
+.tssr-error-common__title {
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-danger-text);
+  margin: 0 0 var(--tssr-space-xs) 0;
+}
+
+.tssr-error-common__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tssr-error-common__item {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  padding: var(--tssr-space-xs) 0;
+  padding-left: var(--tssr-space-lg);
+  position: relative;
+  line-height: var(--tssr-line-height-relaxed);
+}
+
+.tssr-error-common__item::before {
+  content: "✕";
+  position: absolute;
+  left: 0;
+  color: var(--tssr-danger);
+  font-weight: var(--tssr-font-weight-bold);
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 
@@ -553,6 +863,23 @@
   .tssr-module-card__link {
     justify-content: center;
   }
+
+  .tssr-tp-card {
+    padding: var(--tssr-space-md);
+  }
+
+  .tssr-tp-card__header {
+    flex-direction: column;
+  }
+
+  .tssr-tp-card__link {
+    align-self: stretch;
+    justify-content: center;
+  }
+
+  .tssr-tp-meta {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 390px) {
@@ -567,6 +894,23 @@
   .tssr-badge {
     font-size: var(--tssr-font-size-xs);
     padding: var(--tssr-space-xs) var(--tssr-space-xs);
+  }
+
+  .tssr-tp-card {
+    padding: var(--tssr-space-sm);
+  }
+
+  .tssr-tp-card__title {
+    font-size: var(--tssr-font-size-base);
+  }
+
+  .tssr-hint,
+  .tssr-solution,
+  .tssr-error-common,
+  .tssr-expected-result,
+  .tssr-verification,
+  .tssr-tp-environment {
+    padding: var(--tssr-space-sm);
   }
 }
 
