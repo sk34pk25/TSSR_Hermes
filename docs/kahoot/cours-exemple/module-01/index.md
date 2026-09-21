@@ -22,24 +22,76 @@
   </iframe>
 </div>
 
-## Jouer
+## Jouer seul
 
-<div class="tssr-kahoot-actions">
-  <a class="tssr-kahoot-btn tssr-kahoot-btn--solo"
-    href="https://kahoot.it/replay/3f60f90a-7967-4b3b-a67f-f1b696af3065"
-    target="_blank" rel="noopener">
-    ▶ Jouer seul
-  </a>
-  <button class="tssr-kahoot-btn tssr-kahoot-btn--disabled">
-    ⚡ Jouer en groupe
-  </button>
+<div class="tssr-kahoot-solo-grid">
+  <div class="tssr-kahoot-solo-card">
+    <h3 class="tssr-kahoot-solo-card__title">Solo classique</h3>
+    <p class="tssr-kahoot-solo-card__description">
+      Teste tes connaissances avec le quiz complet, à ton rythme.
+    </p>
+    <a class="tssr-kahoot-solo-card__action"
+      href="https://create.kahoot.it/solo?quizId=3f60f90a-7967-4b3b-a67f-f1b696af3065"
+      target="_blank" rel="noopener">
+      ▶ Jouer en solo
+    </a>
+  </div>
+  <div class="tssr-kahoot-solo-card">
+    <h3 class="tssr-kahoot-solo-card__title">Apprentissage</h3>
+    <p class="tssr-kahoot-solo-card__description">
+      Travaille progressivement les notions du module avec le mode apprentissage.
+    </p>
+    <a class="tssr-kahoot-solo-card__action"
+      href="https://create.kahoot.it/solo?quizId=3f60f90a-7967-4b3b-a67f-f1b696af3065&gameMode=nano"
+      target="_blank" rel="noopener">
+      📚 Mode apprentissage
+    </a>
+  </div>
+  <div class="tssr-kahoot-solo-card">
+    <h3 class="tssr-kahoot-solo-card__title">Flashcards</h3>
+    <p class="tssr-kahoot-solo-card__description">
+      Révise rapidement les notions essentielles avec des cartes mémoire.
+    </p>
+    <a class="tssr-kahoot-solo-card__action"
+      href="https://create.kahoot.it/solo?quizId=3f60f90a-7967-4b3b-a67f-f1b696af3065&gameMode=flashcards"
+      target="_blank" rel="noopener">
+      🃏 Réviser avec les flashcards
+    </a>
+  </div>
 </div>
 
-<div class="tssr-kahoot-limitation">
-  <strong>Limitation :</strong> Le mode "Jouer en groupe" nécessite une session live
-  gérée par le serveur Kahoot. Le MCP Kahoot ne fournit pas d'outil pour lancer
-  une session multijoueur (pas de PIN, QR ou lien de session). Le bouton est
-  désactivé en attendant une intégration serveur.
+## Jouer en groupe
+
+<div class="tssr-kahoot-mode-grid">
+  <div class="tssr-kahoot-mode-card">
+    <h3 class="tssr-kahoot-mode-card__title">Organisateur</h3>
+    <p class="tssr-kahoot-mode-card__description">
+      Lance une partie en direct. Kahoot générera automatiquement un PIN
+      et un QR code à partager avec les participants.
+    </p>
+    <a class="tssr-kahoot-mode-card__action"
+      href="https://kahoot.it/game?gameid=3f60f90a-7967-4b3b-a67f-f1b696af3065"
+      target="_blank" rel="noopener">
+      Créer une session
+    </a>
+  </div>
+  <div class="tssr-kahoot-mode-card">
+    <h3 class="tssr-kahoot-mode-card__title">Participant</h3>
+    <p class="tssr-kahoot-mode-card__description">
+      Entre le PIN fourni par l'organisateur pour rejoindre la partie.
+      Saisis-le directement ci-dessous.
+    </p>
+    <div class="tssr-kahoot-join">
+      <iframe
+        class="tssr-kahoot-join__iframe"
+        src="https://kahoot.it/"
+        title="Rejoindre une session Kahoot"
+        loading="lazy"
+        allowfullscreen
+        allow="autoplay; encrypted-media">
+      </iframe>
+    </div>
+  </div>
 </div>
 
 ## Questions du module
@@ -47,4 +99,4 @@
 - [Module →](/cours/cours-exemple/module-01/)
 - [Révision →](/revisions/cours-exemple/module-01/)
 - [Exercices →](/exercices/cours-exemple/module-01/)
-- [Kahoot →](https://kahoot.it/replay/3f60f90a-7967-4b3b-a67f-f1b696af3065)
+- [Kahoot →](https://kahoot.it/game?gameid=3f60f90a-7967-4b3b-a67f-f1b696af3065)
