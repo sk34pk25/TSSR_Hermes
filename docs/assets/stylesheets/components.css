@@ -1291,3 +1291,174 @@
   outline: 2px solid var(--tssr-primary);
   outline-offset: 2px;
 }
+
+/* ==========================================================================
+   Kahoot — Embed responsive (aperçu dans TSSR NEO+)
+   ========================================================================== */
+
+.tssr-kahoot-embed {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: var(--tssr-space-lg) auto;
+  overflow: hidden;
+  border-radius: var(--tssr-radius-lg);
+  border: 1px solid var(--tssr-card-border);
+  background: var(--tssr-card-bg);
+}
+
+.tssr-kahoot-embed__iframe {
+  width: 100%;
+  border: none;
+  display: block;
+  min-height: 500px;
+  max-height: 700px;
+}
+
+/* Mobile-first : hauteur adaptative */
+@media (max-width: 767px) {
+  .tssr-kahoot-embed__iframe {
+    min-height: 400px;
+    max-height: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tssr-kahoot-embed__iframe {
+    min-height: 500px;
+    max-height: 700px;
+  }
+}
+
+/* ==========================================================================
+   Kahoot — Boutons de jeu (Jouer seul / Jouer en groupe)
+   ========================================================================== */
+
+.tssr-kahoot-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tssr-space-md);
+  margin: var(--tssr-space-lg) 0;
+}
+
+@media (min-width: 768px) {
+  .tssr-kahoot-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.tssr-kahoot-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-space-sm);
+  padding: var(--tssr-space-md) var(--tssr-space-lg);
+  border-radius: var(--tssr-radius-md);
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  text-decoration: none;
+  transition: background-color var(--tssr-transition-speed) ease,
+              transform var(--tssr-transition-speed) ease;
+  cursor: pointer;
+  border: none;
+  line-height: 1.4;
+}
+
+.tssr-kahoot-btn:hover,
+.tssr-kahoot-btn:focus-visible {
+  transform: translateY(-1px);
+  outline: 2px solid var(--tssr-primary);
+  outline-offset: 2px;
+}
+
+.tssr-kahoot-btn--solo {
+  background: var(--tssr-primary);
+  color: var(--tssr-primary-text);
+}
+
+.tssr-kahoot-btn--solo:hover {
+  background: var(--tssr-primary-hover);
+}
+
+.tssr-kahoot-btn--group {
+  background: var(--tssr-success);
+  color: var(--tssr-success-text);
+}
+
+.tssr-kahoot-btn--group:hover {
+  background: var(--tssr-success-hover);
+}
+
+.tssr-kahoot-btn--disabled {
+  background: var(--tssr-muted-bg);
+  color: var(--tssr-muted-text);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Kahoot — Section session temporaire (PIN / QR / lien)
+   ========================================================================== */
+
+.tssr-kahoot-session {
+  background: var(--tssr-warning-bg);
+  border: 1px solid var(--tssr-warning-border);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-lg);
+  margin: var(--tssr-space-lg) 0;
+}
+
+.tssr-kahoot-session__title {
+  font-size: var(--tssr-font-size-base);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-warning-text);
+  margin-bottom: var(--tssr-space-md);
+}
+
+.tssr-kahoot-session__detail {
+  display: flex;
+  align-items: center;
+  gap: var(--tssr-space-sm);
+  padding: var(--tssr-space-sm) 0;
+  font-family: var(--tssr-font-mono);
+  font-size: var(--tssr-font-size-sm);
+}
+
+.tssr-kahoot-session__label {
+  font-weight: var(--tssr-font-weight-medium);
+  min-width: 100px;
+  color: var(--tssr-warning-text);
+}
+
+.tssr-kahoot-session__value {
+  color: var(--tssr-text);
+  word-break: break-all;
+}
+
+.tssr-kahoot-session__qr {
+  margin-top: var(--tssr-space-md);
+  text-align: center;
+}
+
+.tssr-kahoot-session__qr img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* ==========================================================================
+   Kahoot — Limitation notice (GitHub Pages)
+   ========================================================================== */
+
+.tssr-kahoot-limitation {
+  background: var(--tssr-info-bg);
+  border: 1px solid var(--tssr-info-border);
+  border-radius: var(--tssr-radius-md);
+  padding: var(--tssr-space-md) var(--tssr-space-lg);
+  margin: var(--tssr-space-md) 0;
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text);
+}
+
+.tssr-kahoot-limitation strong {
+  color: var(--tssr-info-text);
+}

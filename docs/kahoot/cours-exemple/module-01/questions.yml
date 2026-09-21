@@ -1,7 +1,7 @@
 schema_version: 1
 course_id: cours-exemple
 module_id: module-01
-title: "Kahoot — Module 01 — Exemple"
+title: "[DEMO TSSR NEO+] Cours exemple — Module 01"
 question_count: 3
 kahoot:
   remote_id: "3f60f90a-7967-4b3b-a67f-f1b696af3065"
