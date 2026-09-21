@@ -159,12 +159,12 @@
 }
 
 [data-md-color-scheme="slate"] .md-nav__link {
-  color: var(--tssr-text-secondary, #90a4ae);
+  color: var(--tssr-text-secondary, #b0bec5);
 }
 
 [data-md-color-scheme="slate"] .md-nav__link:hover {
-  background-color: var(--tssr-surface-alt, #252538);
-  color: var(--tssr-text, #e0e6ed);
+  background-color: var(--tssr-surface-alt, #232340);
+  color: var(--tssr-text, #e8edf2);
 }
 
 /* Liens actifs — très visible */
@@ -210,8 +210,12 @@
   color: var(--tssr-text-muted, #78909c);
 }
 
+[data-md-color-scheme="slate"] .md-nav__item .md-nav--secondary .md-nav__link {
+  color: var(--tssr-text-muted, #78909c);
+}
+
 [data-md-color-scheme="slate"] .md-nav--tertiary .md-nav__link {
-  color: var(--tssr-text-muted, #607d8b);
+  color: var(--tssr-text-muted, #78909c);
 }
 
 /* Menus repliables — flèches */
@@ -345,7 +349,7 @@
 }
 
 [data-md-color-scheme="slate"] .md-footer__link:hover {
-  background-color: var(--tssr-surface, #1e1e2e);
+  background-color: var(--tssr-surface, #1a1a2e);
   box-shadow: var(--tssr-shadow-sm, 0 1px 3px rgba(0,0,0,.3));
 }
 
@@ -373,14 +377,49 @@
 }
 
 [data-md-color-scheme="slate"] .md-footer__link-caption {
-  color: var(--tssr-text-secondary, #90a4ae);
+  color: var(--tssr-text-secondary, #b0bec5);
+}
+
+/* -----------------------------------------------------------------------
+   Sidebar gauche — Navigation hiérarchique
+   ----------------------------------------------------------------------- */
+.md-sidebar {
+  width: 14rem; /* ~224px */
+}
+
+/* Desktop — sidebar plus large pour meilleure lisibilité */
+@media screen and (min-width: 1280px) {
+  .md-sidebar {
+    width: 16rem; /* ~256px */
+  }
 }
 
 /* -----------------------------------------------------------------------
    Grille Material — largeur page totale
    ----------------------------------------------------------------------- */
 .md-grid {
-  max-width: 90rem; /* ~1440px */
+  max-width: 90rem; /* ~1440px base */
+}
+
+/* Desktop standard — exploiter davantage l'espace */
+@media screen and (min-width: 1280px) {
+  .md-grid {
+    max-width: 95%;
+  }
+}
+
+/* Grand desktop — contenu plus large */
+@media screen and (min-width: 1920px) {
+  .md-grid {
+    max-width: 1600px;
+  }
+}
+
+/* Très grand écran */
+@media screen and (min-width: 2560px) {
+  .md-grid {
+    max-width: 2200px;
+  }
 }
 
 /* -----------------------------------------------------------------------
@@ -398,8 +437,22 @@
 /* Pages normales : largeur de lecture confortable */
 .md-content__inner {
   width: 100%;
-  max-width: 64rem; /* ~1024px */
+  max-width: 64rem; /* ~1024px base */
   margin: 0 auto;
+}
+
+/* Desktop standard — contenu plus large */
+@media screen and (min-width: 1280px) {
+  .md-content__inner {
+    max-width: 72rem; /* ~1152px */
+  }
+}
+
+/* Grand desktop */
+@media screen and (min-width: 1920px) {
+  .md-content__inner {
+    max-width: 80rem; /* ~1280px */
+  }
 }
 
 /* Pages larges (dashboard, homepage, parcours, cours index) */

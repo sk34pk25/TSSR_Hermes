@@ -91,3 +91,195 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ===================================================================
+   DESKTOP — 1024px et plus (petit laptop)
+   =================================================================== */
+@media screen and (min-width: 1024px) {
+  /* Sidebar plus large */
+  .md-sidebar {
+    width: 15rem; /* ~240px */
+  }
+
+  /* Grilles 3 colonnes */
+  .tssr-metrics__grid,
+  .tssr-quick-access__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Cartes plus aérées */
+  .tssr-card {
+    padding: 1.5rem;
+  }
+}
+
+/* ===================================================================
+   DESKTOP STANDARD — 1280px et plus (laptop standard)
+   =================================================================== */
+@media screen and (min-width: 1280px) {
+  /* Grille étendue */
+  .md-grid {
+    max-width: 95%;
+  }
+
+  /* Sidebar optimale */
+  .md-sidebar {
+    width: 16rem; /* ~256px */
+  }
+
+  /* Hero proportionné */
+  .tssr-hero {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .tssr-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .tssr-hero p {
+    font-size: 1.125rem;
+  }
+
+  /* Cartes plus généreuses */
+  .tssr-card {
+    padding: 1.75rem;
+  }
+
+  /* Grilles 3 colonnes bien espacées */
+  .tssr-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* Composants Kahoot largeur desktop */
+  .tssr-kahoot-section {
+    max-width: 100%;
+  }
+
+  .tssr-kahoot-section .tssr-iframe-container {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
+
+/* ===================================================================
+   GRAND DESKTOP — 1440px et plus
+   =================================================================== */
+@media screen and (min-width: 1440px) {
+  /* Grille plus étendue */
+  .md-grid {
+    max-width: 1400px;
+  }
+
+  /* Hero section */
+  .tssr-hero h1 {
+    font-size: 2.75rem;
+    line-height: 1.15;
+  }
+
+  /* Cartes plus grandes */
+  .tssr-card {
+    padding: 1.75rem;
+  }
+
+  /* Grille de cartes plus dense */
+  .tssr-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
+  /* Iframe Kahoot plus large */
+  .tssr-kahoot-section .tssr-iframe-container {
+    max-width: 1300px;
+  }
+}
+
+/* ===================================================================
+   GRAND DESKTOP — 1920px et plus
+   =================================================================== */
+@media screen and (min-width: 1920px) {
+  /* Grille étendue */
+  .md-grid {
+    max-width: 1600px;
+  }
+
+  /* Hero encore plus grand */
+  .tssr-hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .tssr-hero h1 {
+    font-size: 3rem;
+  }
+
+  .tssr-hero p {
+    font-size: 1.25rem;
+  }
+
+  /* Cartes plus généreuses */
+  .tssr-card {
+    padding: 2rem;
+  }
+
+  /* Grille 4 colonnes pour les cartes */
+  .tssr-grid {
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 2rem;
+  }
+
+  /* Navigation plus aérée */
+  .md-sidebar {
+    width: 18rem; /* ~288px */
+  }
+
+  /* Composants Kahoot très larges */
+  .tssr-kahoot-section .tssr-iframe-container {
+    max-width: 1400px;
+  }
+}
+
+/* ===================================================================
+   TRÈS GRANDS ÉCRANS — 2560px et plus
+   =================================================================== */
+@media screen and (min-width: 2560px) {
+  /* Grille très étendue */
+  .md-grid {
+    max-width: 2200px;
+  }
+
+  /* Hero imposant */
+  .tssr-hero {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .tssr-hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .tssr-hero p {
+    font-size: 1.5rem;
+  }
+
+  /* Cartes très généreuses */
+  .tssr-card {
+    padding: 2.5rem;
+  }
+
+  /* Grille 4 colonnes fixe */
+  .tssr-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Navigation très large */
+  .md-sidebar {
+    width: 20rem; /* ~320px */
+  }
+
+  /* Composants Kahoot très larges */
+  .tssr-kahoot-section .tssr-iframe-container {
+    max-width: 2000px;
+  }
+}

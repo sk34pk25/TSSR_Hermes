@@ -1620,10 +1620,17 @@
 .tssr-kahoot-join__iframe {
   width: 100%;
   height: 600px;
-  border: 1px solid var(--tssr-card-border);
+  border: 1px solid var(--tssr-border, #b0bec5);
   border-radius: var(--tssr-radius-lg);
-  background: var(--tssr-card-bg);
+  background: var(--tssr-surface, #ffffff);
   display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+
+[data-md-color-scheme="slate"] .tssr-kahoot-join__iframe {
+  border-color: var(--tssr-border, #455a64);
+  background: var(--tssr-surface, #1a1a2e);
+  box-shadow: 0 1px 3px rgba(0,0,0,.3);
 }
 
 @media (min-width: 768px) {

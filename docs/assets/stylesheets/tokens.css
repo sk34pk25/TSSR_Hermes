@@ -16,19 +16,19 @@
   --tssr-accent-light:   #4dd0e1;
   --tssr-accent-dark:    #00838f;
 
-  /* Arrière-plans & surfaces */
-  --tssr-bg:             #f5f7fa;
+  /* Arrière-plans & surfaces — hiérarchie visuelle claire */
+  --tssr-bg:             #f0f2f5;
   --tssr-surface:        #ffffff;
-  --tssr-surface-alt:    #eef1f5;
+  --tssr-surface-alt:    #e4e8ed;
 
-  /* Texte */
+  /* Texte — contrastes >= 4.5:1 AA */
   --tssr-text:           #1a1a2e;
-  --tssr-text-secondary: #546e7a;
-  --tssr-text-muted:     #78909c;
+  --tssr-text-secondary: #37474f;
+  --tssr-text-muted:     #546e7a;
 
-  /* Bordures */
-  --tssr-border:         #cfd8dc;
-  --tssr-border-light:   #eceff1;
+  /* Bordures — visibles mais discrètes */
+  --tssr-border:         #b0bec5;
+  --tssr-border-light:   #cfd8dc;
 
   /* Sémantique */
   --tssr-success:        #2e7d32;
@@ -52,6 +52,11 @@
   --tssr-radius-md:      8px;
   --tssr-radius-lg:      12px;
 
+  /* Cartes — surfaces et bordures */
+  --tssr-card-bg:            var(--tssr-surface);
+  --tssr-card-border:        var(--tssr-border);
+  --tssr-card-text:          var(--tssr-text);
+
   /* Largeur maximale du contenu */
   --tssr-max-width:      1100px;
 
@@ -71,19 +76,19 @@
   --tssr-accent-light:   #80deea;
   --tssr-accent-dark:    #00acc1;
 
-  /* Arrière-plans & surfaces */
-  --tssr-bg:             #121212;
-  --tssr-surface:        #1e1e2e;
-  --tssr-surface-alt:    #252538;
+  /* Arrière-plans & surfaces — hiérarchie visuelle claire */
+  --tssr-bg:             #0d0d14;
+  --tssr-surface:        #1a1a2e;
+  --tssr-surface-alt:    #232340;
 
-  /* Texte */
-  --tssr-text:           #e0e6ed;
-  --tssr-text-secondary: #90a4ae;
-  --tssr-text-muted:     #607d8b;
+  /* Texte — contrastes >= 4.5:1 AA */
+  --tssr-text:           #e8edf2;
+  --tssr-text-secondary: #b0bec5;
+  --tssr-text-muted:     #78909c;
 
-  /* Bordures */
-  --tssr-border:         #37474f;
-  --tssr-border-light:   #263238;
+  /* Bordures — visibles sur fond sombre */
+  --tssr-border:         #455a64;
+  --tssr-border-light:   #37474f;
 
   /* Sémantique */
   --tssr-success:        #66bb6a;
