@@ -100,48 +100,51 @@ markdown_extensions:
 nav:
   - Accueil: index.md
   - Parcours: parcours/index.md
-  - Cours:
-      - Cours: cours/index.md
-      - Cours exemple:
-          - Présentation: cours/cours-exemple/index.md
-          - Module 01 — Exemple: cours/cours-exemple/module-01/index.md
-          - Module 02 — Exemple: cours/cours-exemple/module-02/index.md
-  - Tutoriels: tutoriels/index.md
-  - Travaux pratiques:
-      - Travaux pratiques: travaux-pratiques/index.md
-      - Cours exemple:
-          - Module 01 — Exemple:
-              - TP exemple:
-                  - Présentation: travaux-pratiques/cours-exemple/module-01/tp-exemple/index.md
-                  - Énoncé: travaux-pratiques/cours-exemple/module-01/tp-exemple/enonce.md
-                  - Correction: travaux-pratiques/cours-exemple/module-01/tp-exemple/correction.md
-  - Exercices:
-      - Exercices: exercices/index.md
-      - Cours exemple:
-          - Module 01 — Exemple:
-              - Exercices: exercices/cours-exemple/module-01/index.md
-          - Module 02 — Exemple:
-              - Exercices: exercices/cours-exemple/module-02/index.md
-  - Kahoot:
-    - Kahoot: kahoot/index.md
-    - Cours exemple:
-      - Module 01 — Exemple:
-        - Kahoot: kahoot/cours-exemple/module-01/index.md
-      - Module 02 — Exemple:
-        - Kahoot: kahoot/cours-exemple/module-02/index.md
-  - Révisions:
-      - Révisions: revisions/index.md
-      - Cours exemple:
-          - Module 01 — Exemple:
-              - Révision: revisions/cours-exemple/module-01/index.md
-          - Module 02 — Exemple:
-              - Révision: revisions/cours-exemple/module-02/index.md
-  - Mémos: memos/index.md
-  - Commandes: commandes/index.md
-  - Dépannage: depannage/index.md
-  - Glossaire: glossaire/index.md
-  - Ressources: ressources/index.md
-  - Index général: index-general/index.md
+
+  - APPRENDRE:
+    - Cours:
+        - Sommaire: cours/index.md
+        - Cours exemple:
+            - Présentation: cours/cours-exemple/index.md
+            - Module 01: cours/cours-exemple/module-01/index.md
+            - Module 02: cours/cours-exemple/module-02/index.md
+    - Tutoriels: tutoriels/index.md
+
+  - PRATIQUER:
+    - Travaux pratiques:
+        - Sommaire: travaux-pratiques/index.md
+        - Cours exemple:
+            - Module 01:
+                - Présentation: travaux-pratiques/cours-exemple/module-01/tp-exemple/index.md
+                - Énoncé: travaux-pratiques/cours-exemple/module-01/tp-exemple/enonce.md
+                - Correction: travaux-pratiques/cours-exemple/module-01/tp-exemple/correction.md
+    - Exercices:
+        - Sommaire: exercices/index.md
+        - Cours exemple:
+            - Module 01: exercices/cours-exemple/module-01/index.md
+            - Module 02: exercices/cours-exemple/module-02/index.md
+
+  - RÉVISER:
+    - Révisions:
+        - Sommaire: revisions/index.md
+        - Cours exemple:
+            - Module 01: revisions/cours-exemple/module-01/index.md
+            - Module 02: revisions/cours-exemple/module-02/index.md
+    - Kahoot:
+        - Sommaire: kahoot/index.md
+        - Cours exemple:
+            - Module 01: kahoot/cours-exemple/module-01/index.md
+            - Module 02: kahoot/cours-exemple/module-02/index.md
+
+  - OUTILS:
+    - Mémos: memos/index.md
+    - Commandes: commandes/index.md
+    - Dépannage: depannage/index.md
+
+  - RÉFÉRENCES:
+    - Glossaire: glossaire/index.md
+    - Ressources: ressources/index.md
+    - Index général: index-general/index.md
 
 extra:
   social:
