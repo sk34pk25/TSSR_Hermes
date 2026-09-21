@@ -70,7 +70,7 @@
       et un QR code à partager avec les participants.
     </p>
     <a class="tssr-kahoot-mode-card__action"
-      href="https://kahoot.it/game?gameid=3f60f90a-7967-4b3b-a67f-f1b696af3065"
+      href="https://create.kahoot.it/share/demo-tssr-neo-cours-exemple-module-01/3f60f90a-7967-4b3b-a67f-f1b696af3065"
       target="_blank" rel="noopener">
       Créer une session
     </a>
@@ -84,11 +84,11 @@
     <div class="tssr-kahoot-join">
       <iframe
         class="tssr-kahoot-join__iframe"
-        src="https://kahoot.it/"
+        src="https://kahoot.it/?pin="
         title="Rejoindre une session Kahoot"
         loading="lazy"
-        allowfullscreen
-        allow="autoplay; encrypted-media">
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
       </iframe>
     </div>
   </div>
