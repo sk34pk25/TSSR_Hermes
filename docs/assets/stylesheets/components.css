@@ -1535,3 +1535,99 @@
   outline: 2px solid var(--tssr-primary);
   outline-offset: 2px;
 }
+
+/* ==========================================================================
+   TSSR NEO+ — Kahoot Group Mode Grid (2 modes)
+   ========================================================================== */
+
+.tssr-kahoot-mode-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--tssr-space-md);
+  margin: var(--tssr-space-lg) 0;
+}
+
+@media (min-width: 768px) {
+  .tssr-kahoot-mode-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tssr-kahoot-mode-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--tssr-card-bg);
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-lg);
+  padding: var(--tssr-space-lg);
+  transition: box-shadow var(--tssr-transition-speed) ease,
+              border-color var(--tssr-transition-speed) ease;
+}
+
+.tssr-kahoot-mode-card:hover {
+  box-shadow: var(--tssr-shadow-md);
+  border-color: var(--tssr-secondary);
+}
+
+.tssr-kahoot-mode-card__title {
+  font-size: var(--tssr-font-size-lg);
+  font-weight: var(--tssr-font-weight-semibold);
+  color: var(--tssr-text-primary);
+  margin: 0 0 var(--tssr-space-sm) 0;
+  line-height: var(--tssr-line-height-snug);
+}
+
+.tssr-kahoot-mode-card__description {
+  font-size: var(--tssr-font-size-sm);
+  color: var(--tssr-text-secondary);
+  line-height: var(--tssr-line-height-relaxed);
+  margin: 0 0 var(--tssr-space-md) 0;
+  flex-grow: 1;
+}
+
+.tssr-kahoot-mode-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tssr-space-sm);
+  padding: var(--tssr-space-sm) var(--tssr-space-md);
+  background: var(--tssr-secondary);
+  color: var(--tssr-secondary-text);
+  font-size: var(--tssr-font-size-sm);
+  font-weight: var(--tssr-font-weight-semibold);
+  text-decoration: none;
+  border-radius: var(--tssr-radius-md);
+  transition: background-color var(--tssr-transition-speed) ease,
+              transform var(--tssr-transition-speed) ease;
+  margin-top: auto;
+}
+
+.tssr-kahoot-mode-card__action:hover,
+.tssr-kahoot-mode-card__action:focus-visible {
+  background: var(--tssr-secondary-hover);
+  transform: translateY(-1px);
+  outline: 2px solid var(--tssr-secondary);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   TSSR NEO+ — Kahoot Join Session (iframe)
+   ========================================================================== */
+
+.tssr-kahoot-join {
+  margin-top: var(--tssr-space-md);
+}
+
+.tssr-kahoot-join__iframe {
+  width: 100%;
+  height: 600px;
+  border: 1px solid var(--tssr-card-border);
+  border-radius: var(--tssr-radius-lg);
+  background: var(--tssr-card-bg);
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .tssr-kahoot-join__iframe {
+    height: 700px;
+  }
+}
