@@ -19,6 +19,7 @@
 }
 
 .md-header__title {
+  color: var(--tssr-text);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -159,12 +160,12 @@
 }
 
 [data-md-color-scheme="slate"] .md-nav__link {
-  color: var(--tssr-text-secondary, #b0bec5);
+  color: var(--tssr-text-secondary, #90a4ae);
 }
 
 [data-md-color-scheme="slate"] .md-nav__link:hover {
-  background-color: var(--tssr-surface-alt, #232340);
-  color: var(--tssr-text, #e8edf2);
+  background-color: var(--tssr-surface-alt, #252538);
+  color: var(--tssr-text, #e0e6ed);
 }
 
 /* Liens actifs — très visible */
@@ -210,12 +211,8 @@
   color: var(--tssr-text-muted, #78909c);
 }
 
-[data-md-color-scheme="slate"] .md-nav__item .md-nav--secondary .md-nav__link {
-  color: var(--tssr-text-muted, #78909c);
-}
-
 [data-md-color-scheme="slate"] .md-nav--tertiary .md-nav__link {
-  color: var(--tssr-text-muted, #78909c);
+  color: var(--tssr-text-muted, #607d8b);
 }
 
 /* Menus repliables — flèches */
@@ -349,7 +346,7 @@
 }
 
 [data-md-color-scheme="slate"] .md-footer__link:hover {
-  background-color: var(--tssr-surface, #1a1a2e);
+  background-color: var(--tssr-surface, #1e1e2e);
   box-shadow: var(--tssr-shadow-sm, 0 1px 3px rgba(0,0,0,.3));
 }
 
@@ -377,49 +374,14 @@
 }
 
 [data-md-color-scheme="slate"] .md-footer__link-caption {
-  color: var(--tssr-text-secondary, #b0bec5);
-}
-
-/* -----------------------------------------------------------------------
-   Sidebar gauche — Navigation hiérarchique
-   ----------------------------------------------------------------------- */
-.md-sidebar {
-  width: 14rem; /* ~224px */
-}
-
-/* Desktop — sidebar plus large pour meilleure lisibilité */
-@media screen and (min-width: 1280px) {
-  .md-sidebar {
-    width: 16rem; /* ~256px */
-  }
+  color: var(--tssr-text-secondary, #90a4ae);
 }
 
 /* -----------------------------------------------------------------------
    Grille Material — largeur page totale
    ----------------------------------------------------------------------- */
 .md-grid {
-  max-width: 90rem; /* ~1440px base */
-}
-
-/* Desktop standard — exploiter davantage l'espace */
-@media screen and (min-width: 1280px) {
-  .md-grid {
-    max-width: 95%;
-  }
-}
-
-/* Grand desktop — contenu plus large */
-@media screen and (min-width: 1920px) {
-  .md-grid {
-    max-width: 1600px;
-  }
-}
-
-/* Très grand écran */
-@media screen and (min-width: 2560px) {
-  .md-grid {
-    max-width: 2200px;
-  }
+  max-width: 90rem; /* ~1440px */
 }
 
 /* -----------------------------------------------------------------------
@@ -437,28 +399,30 @@
 /* Pages normales : largeur de lecture confortable */
 .md-content__inner {
   width: 100%;
-  max-width: 64rem; /* ~1024px base */
+  max-width: 64rem; /* ~1024px */
   margin: 0 auto;
-}
-
-/* Desktop standard — contenu plus large */
-@media screen and (min-width: 1280px) {
-  .md-content__inner {
-    max-width: 72rem; /* ~1152px */
-  }
-}
-
-/* Grand desktop */
-@media screen and (min-width: 1920px) {
-  .md-content__inner {
-    max-width: 80rem; /* ~1280px */
-  }
 }
 
 /* Pages larges (dashboard, homepage, parcours, cours index) */
 .md-content__inner.tssr-wide,
 .tssr-wide {
   max-width: 76rem; /* ~1216px */
+}
+
+/* -----------------------------------------------------------------------
+   Desktop (≥1024px) — Layout fluide
+   ----------------------------------------------------------------------- */
+@media screen and (min-width: 64em) {
+  /* Élargi au-dessus du base 64rem pour exploiter les grands écrans */
+  .md-content__inner {
+    max-width: 80rem;
+  }
+
+  /* Élargi au-dessus du base 76rem pour exploiter les grands écrans */
+  .md-content__inner.tssr-wide,
+  .tssr-wide {
+    max-width: 88rem;
+  }
 }
 
 /* -----------------------------------------------------------------------

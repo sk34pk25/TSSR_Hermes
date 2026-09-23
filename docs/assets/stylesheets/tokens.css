@@ -16,19 +16,19 @@
   --tssr-accent-light:   #4dd0e1;
   --tssr-accent-dark:    #00838f;
 
-  /* Arrière-plans & surfaces — hiérarchie visuelle claire */
-  --tssr-bg:             #f0f2f5;
+  /* Arrière-plans & surfaces */
+  --tssr-bg:             #f5f7fa;
   --tssr-surface:        #ffffff;
-  --tssr-surface-alt:    #e4e8ed;
+  --tssr-surface-alt:    #eef1f5;
 
-  /* Texte — contrastes >= 4.5:1 AA */
+  /* Texte */
   --tssr-text:           #1a1a2e;
-  --tssr-text-secondary: #37474f;
-  --tssr-text-muted:     #546e7a;
+  --tssr-text-secondary: #546e7a;
+  --tssr-text-muted:     #78909c;
 
-  /* Bordures — visibles mais discrètes */
-  --tssr-border:         #b0bec5;
-  --tssr-border-light:   #cfd8dc;
+  /* Bordures */
+  --tssr-border:         #cfd8dc;
+  --tssr-border-light:   #eceff1;
 
   /* Sémantique */
   --tssr-success:        #2e7d32;
@@ -52,10 +52,9 @@
   --tssr-radius-md:      8px;
   --tssr-radius-lg:      12px;
 
-  /* Cartes — surfaces et bordures */
-  --tssr-card-bg:            var(--tssr-surface);
-  --tssr-card-border:        var(--tssr-border);
-  --tssr-card-text:          var(--tssr-text);
+  /* Cartes réutilisables */
+  --tssr-card-bg:        var(--tssr-surface);
+  --tssr-card-border:    var(--tssr-border);
 
   /* Largeur maximale du contenu */
   --tssr-max-width:      1100px;
@@ -76,19 +75,19 @@
   --tssr-accent-light:   #80deea;
   --tssr-accent-dark:    #00acc1;
 
-  /* Arrière-plans & surfaces — hiérarchie visuelle claire */
-  --tssr-bg:             #0d0d14;
-  --tssr-surface:        #1a1a2e;
-  --tssr-surface-alt:    #232340;
+  /* Arrière-plans & surfaces */
+  --tssr-bg:             #121212;
+  --tssr-surface:        #1e1e2e;
+  --tssr-surface-alt:    #252538;
 
-  /* Texte — contrastes >= 4.5:1 AA */
-  --tssr-text:           #e8edf2;
-  --tssr-text-secondary: #b0bec5;
-  --tssr-text-muted:     #78909c;
+  /* Texte */
+  --tssr-text:           #e0e6ed;
+  --tssr-text-secondary: #90a4ae;
+  --tssr-text-muted:     #607d8b;
 
-  /* Bordures — visibles sur fond sombre */
-  --tssr-border:         #455a64;
-  --tssr-border-light:   #37474f;
+  /* Bordures */
+  --tssr-border:         #37474f;
+  --tssr-border-light:   #263238;
 
   /* Sémantique */
   --tssr-success:        #66bb6a;
@@ -111,6 +110,10 @@
   --tssr-radius-sm:      4px;
   --tssr-radius-md:      8px;
   --tssr-radius-lg:      12px;
+
+  /* Cartes réutilisables dans le thème sombre */
+  --tssr-card-bg:        var(--tssr-surface);
+  --tssr-card-border:    var(--tssr-border);
 
   /* Largeur — identique */
   --tssr-max-width:      1100px;
