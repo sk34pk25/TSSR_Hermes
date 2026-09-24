@@ -104,10 +104,6 @@ nav:
   - APPRENDRE:
     - Cours:
         - Sommaire: cours/index.md
-        - Cours exemple:
-            - Présentation: cours/cours-exemple/index.md
-            - Module 01: cours/cours-exemple/module-01/index.md
-            - Module 02: cours/cours-exemple/module-02/index.md
     - Tutoriels: tutoriels/index.md
 
   - PRATIQUER:
@@ -115,28 +111,14 @@ nav:
         - Mise en situation: msp/index.md
     - Travaux pratiques:
         - Sommaire: travaux-pratiques/index.md
-        - Cours exemple:
-            - Module 01:
-                - Présentation: travaux-pratiques/cours-exemple/module-01/tp-exemple/index.md
-                - Énoncé: travaux-pratiques/cours-exemple/module-01/tp-exemple/enonce.md
-                - Correction: travaux-pratiques/cours-exemple/module-01/tp-exemple/correction.md
     - Exercices:
         - Sommaire: exercices/index.md
-        - Cours exemple:
-            - Module 01: exercices/cours-exemple/module-01/index.md
-            - Module 02: exercices/cours-exemple/module-02/index.md
 
   - RÉVISER:
     - Révisions:
         - Sommaire: revisions/index.md
-        - Cours exemple:
-            - Module 01: revisions/cours-exemple/module-01/index.md
-            - Module 02: revisions/cours-exemple/module-02/index.md
     - Kahoot:
         - Sommaire: kahoot/index.md
-        - Cours exemple:
-            - Module 01: kahoot/cours-exemple/module-01/index.md
-            - Module 02: kahoot/cours-exemple/module-02/index.md
 
   - OUTILS:
     - Mémos: memos/index.md
