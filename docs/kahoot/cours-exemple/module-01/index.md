@@ -96,7 +96,7 @@
 
 ## Questions du module
 
-- [Module →](/cours/cours-exemple/module-01/)
-- [Révision →](/revisions/cours-exemple/module-01/)
-- [Exercices →](/exercices/cours-exemple/module-01/)
+- [Module →](../../../cours/cours-exemple/module-01/index.md)
+- [Révision →](../../../revisions/cours-exemple/module-01/index.md)
+- [Exercices →](../../../exercices/cours-exemple/module-01/index.md)
 - [Kahoot →](https://kahoot.it/game?gameid=3f60f90a-7967-4b3b-a67f-f1b696af3065)

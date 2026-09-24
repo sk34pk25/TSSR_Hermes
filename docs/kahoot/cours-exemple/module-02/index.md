@@ -44,7 +44,7 @@
 
 ## Questions du module
 
-- [Module →](/cours/cours-exemple/module-02/)
-- [Révision →](/revisions/cours-exemple/module-02/)
-- [Exercices →](/exercices/cours-exemple/module-02/)
+- [Module →](../../../cours/cours-exemple/module-02/index.md)
+- [Révision →](../../../revisions/cours-exemple/module-02/index.md)
+- [Exercices →](../../../exercices/cours-exemple/module-02/index.md)
 - [Kahoot →](https://kahoot.it/replay/eafbefc2-9e44-434e-beda-36fdb6a1527f)

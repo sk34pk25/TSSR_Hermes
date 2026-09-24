@@ -102,6 +102,8 @@ nav:
   - Parcours: parcours/index.md
 
   - APPRENDRE:
+    - MSP:
+        - Mise en situation: msp/index.md
     - Cours:
         - Sommaire: cours/index.md
         - Cours exemple:
