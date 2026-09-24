@@ -102,8 +102,6 @@ nav:
   - Parcours: parcours/index.md
 
   - APPRENDRE:
-    - MSP:
-        - Mise en situation: msp/index.md
     - Cours:
         - Sommaire: cours/index.md
         - Cours exemple:
@@ -113,6 +111,8 @@ nav:
     - Tutoriels: tutoriels/index.md
 
   - PRATIQUER:
+    - MSP:
+        - Mise en situation: msp/index.md
     - Travaux pratiques:
         - Sommaire: travaux-pratiques/index.md
         - Cours exemple:
