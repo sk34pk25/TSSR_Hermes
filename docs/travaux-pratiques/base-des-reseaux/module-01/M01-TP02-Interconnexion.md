@@ -25,6 +25,59 @@ Ce TP complet propose d'interconnecter les différents périphériques d'un rés
    - WPA2-PSK : TssrBDRWifi
 6. Connecter les routeurs entre eux en utilisant la fibre optique
 
+## Topologie du réseau
+
+```mermaid
+flowchart LR
+    %% Routeurs (nœuds centraux)
+    R1["Routeur1\n2901"]
+    R2["Routeur2\n2901"]
+    R3["Routeur3\n2901"]
+
+    %% Switchs
+    SW1["Switch1\n2960-24TT"]
+    SW3["Switch3\n2960-24TT"]
+
+    %% Réseau PC
+    PC1["PC1\nPC-PT"]
+    PC2["PC2\nPC-PT"]
+
+    %% Réseau Serveurs
+    DNS["DNS\nServer-PT"]
+    DHCP["DHCP\nServer-PT"]
+    WEB["WEB\nServer-PT"]
+
+    %% Réseau Wi-Fi
+    AP["Point d'accès0\nAccessPoint-PT"]
+    LP1["Portable1\nLaptop-PT"]
+    LP2["Portable2\nLaptop-PT"]
+
+    %% Cuivre : Routeur ↔ Switch
+    R1 --- SW1
+    R3 --- SW3
+    R2 --- AP
+
+    %% Cuivre : PC ↔ Switch
+    PC1 --- SW1
+    PC2 --- SW1
+
+    %% Cuivre : Serveurs ↔ Switch
+    DNS --- SW3
+    DHCP --- SW3
+    WEB --- SW3
+
+    %% Fibre : interconnexions routeurs
+    R1 -.-> R2
+    R1 -.-> R3
+    R2 -.-> R3
+
+    %% Sans fil : AP ↔ Portables
+    AP ..> LP1
+    AP ..> LP2
+```
+
+> Vue simplifiée de la topologie. Les tableaux ci-dessous conservent les ports et les 14 connexions exactes issues de la source.
+
 ## Dispositifs (14)
 
 | Nom | Modèle | Type |
@@ -82,10 +135,12 @@ Ce TP complet propose d'interconnecter les différents périphériques d'un rés
 
 ## Paramètres Wi-Fi
 
-- **SSID** : TssrBDRWifi
-- **Canal** : 6
-- **Encryption** : WPA2-PSK
-- **Passphrase** : TssrBDRWifi
+| Paramètre | Valeur |
+|-----------|--------|
+| SSID | TssrBDRWifi |
+| Canal | 6 |
+| Sécurité | WPA2-PSK |
+| Phrase secrète | TssrBDRWifi |
 
 ## Segments réseau
 
@@ -95,9 +150,11 @@ Ce TP complet propose d'interconnecter les différents périphériques d'un rés
 
 ## Scoring / Évaluation
 
-- Mention d'un pourcentage d'achèvement à 100%
-- Bouton "Vérifier les résultats" avec liste des éléments évalués
-- Texte exact : *"Si vous avez suivi les consignes, le pourcentage d'achèvement doit être égal à 100%. En cliquant sur le bouton Vérifier les résultats, puis en sélectionnant le 2ième onglet, vous avez la liste des éléments qui sont évalués."*
+**Objectif** : 100 % d'achèvement
+
+**Bouton** : "Vérifier les résultats"
+
+> *Si vous avez suivi les consignes, le pourcentage d'achèvement doit être égal à 100%. En cliquant sur le bouton Vérifier les résultats, puis en sélectionnant le 2ième onglet, vous avez la liste des éléments qui sont évalués.*
 
 ---
 
