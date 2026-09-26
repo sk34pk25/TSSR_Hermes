@@ -104,6 +104,8 @@ nav:
   - APPRENDRE:
     - Cours:
         - Sommaire: cours/index.md
+        - Base des réseaux:
+            - Module 01 - Le modèle OSI: cours/base-des-reseaux/module-01/index.md
     - Tutoriels: tutoriels/index.md
 
   - PRATIQUER:
