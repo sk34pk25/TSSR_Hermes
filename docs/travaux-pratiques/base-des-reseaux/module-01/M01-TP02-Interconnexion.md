@@ -72,8 +72,8 @@ flowchart LR
     R2 -.-> R3
 
     %% Sans fil : AP ↔ Portables
-    AP ..> LP1
-    AP ..> LP2
+    AP -.-> LP1
+    AP -.-> LP2
 ```
 
 > Vue simplifiée de la topologie. Les tableaux ci-dessous conservent les ports et les 14 connexions exactes issues de la source.
