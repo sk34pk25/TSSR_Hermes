@@ -49,6 +49,9 @@ theme:
     repo: fontawesome/brands/github
     logo: material/school
 
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
+  - assets/javascripts/mermaid-init.js
 extra_css:
   - assets/stylesheets/tokens.css
   - assets/stylesheets/base.css
