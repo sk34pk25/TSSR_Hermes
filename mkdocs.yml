@@ -105,6 +105,7 @@ nav:
     - Cours:
         - Sommaire: cours/index.md
         - Base des réseaux:
+            - Base des réseaux: cours/base-des-reseaux/index.md
             - Module 01 - Le modèle OSI: cours/base-des-reseaux/module-01/index.md
     - Tutoriels: tutoriels/index.md
 
