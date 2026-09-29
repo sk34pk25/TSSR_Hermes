@@ -110,6 +110,8 @@ nav:
         - Base des réseaux:
             - Base des réseaux: cours/base-des-reseaux/index.md
             - Module 01 - Le modèle OSI: cours/base-des-reseaux/module-01/index.md
+        - Services réseau en environnement Linux:
+            - Services réseau en environnement Linux: cours/services-reseau-en-environnement-linux/module-01/index.md
     - Tutoriels: tutoriels/index.md
 
   - PRATIQUER:
